@@ -2800,6 +2800,24 @@ section>.goal>.meter {
 	margin-left: 0;
 }
 
+section>.individual,section>.individual:nth-of-type(odd){float:none;width:720px;margin:0 auto;height:auto;border:none;padding:0 0 19px;}
+section>.individual h3{font-size:24px;margin-bottom:0;}
+section>.individual>.meter{width:545px;margin:0;float:left;}
+section>.individual>div.goalImg{height:90px;width:120px;overflow:hidden;}
+section>.individual>div.goalImg>img{margin-left:-24px;}
+section>.individual>div.datalegend{display:block;float:right;width:165px;text-align:right;font-size:14px;}
+
+#goalsSummary>section.left,#goalsSummary>section.right{float:left;margin-right:10px;width:380px;}
+#goalsSummary>section.right{float:right;margin-right:0;}
+#goalsSummary .activity .post{margin-left:10px;margin-bottom:20px;}
+#goalsSummary .activity span{display:block;float:left;width:280px;}
+#goalsSummary .activity .avatar{width:77px;height:78px;margin-right:13px;}
+#goalsSummary .activity .comment{margin-right:10px;}
+#goalsSummary .activity .comment span{float:left;width:296px;}
+#goalsSummary .activity .comment .avatar{float:left;width:49px;height:50px;}
+#goalsSummary .activity .comment input{width:352px;height:25px;}
+
+
 #main>footer {
 width: 794px;
 height: 54px;
@@ -2885,7 +2903,7 @@ fieldset{border:none;margin-top:5px;}
 .milesLabel,.femaleLabel{margin-right:35px;}
 
 
-#maindetails{	background:#fff;width:780px;margin:0 auto;padding-top:19px;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-moz-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);z-index:99;}
+#maindetails{background:#fff;width:780px;margin:0 auto;padding:19px 0;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-moz-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);z-index:99;}
 #maindetails .left, .profileDetails .right{float:left;display:block;width:261px;}
 #maindetails .right{float:right;width:499px;}
 #maindetails .left section{margin-left:21px;}
@@ -2897,12 +2915,12 @@ fieldset{border:none;margin-top:5px;}
 #followBtn,#followBtn a{display:block;float:right;width:182px;height:47px;}
 #followBtn a{float:none;width:141px;position:absolute;text-indent:-9999em;top:48px;background:transparent url(../_img/buttons.png) no-repeat 0 -176px}
 
-.profileDetails h2,.profileDetails h3{color:#fff;font:bold 16px/1 Arial, Helvetica, sans-serif;text-indent:9px;margin:0;padding:0;}
+.profileDetails h2,.profileDetails h3,.individualGoals h2{color:#fff;font:bold 16px/1 Arial, Helvetica, sans-serif;text-indent:9px;margin:0;padding:0;}
 .profileDetails h3{color:#000;text-indent:0;}
 .profileDetails a{text-decoration:none;}
 .profileDetails ul,.profileDetails li{list-style-type:none;margin:0 0 0 -3px;padding:0;}
 .profileDetails #myGoals ul,.profileDetails #myGoals li{margin-left:0;}
-.profileDetails header{background:#e3d724;padding:6px 0 9px 0;margin-bottom:10px;}
+.profileDetails header,.individualGoals header{background:#e3d724;padding:6px 0 9px 0;margin-bottom:10px;}
 
 .profileDetails .left section li a{color:#000;line-height:1.75;background:transparent url(../_img/icons_content.png) no-repeat 100% -609px;padding-right:2em;}
 .profileDetails .left section header{margin-left:-21px;}
