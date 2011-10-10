@@ -1,0 +1,262 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>My Profile (forked from new Home Page design)</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jqueryui/jquery-ui-1.8.16.custom.css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie8.css">
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script src="js/main.js"></script>
+</head>
+<body>
+
+	<div id="container" class="home">
+	<header>
+			<section id="accountNav">
+				<img src="images/profilephoto.png" /><a href="#">logout</a> <a
+					href="#">settings</a><span>hello, <b>lorem</b> </span>
+			</section>
+
+			<nav id="mainNav">
+				<div id="logo"></div>
+				<section title="home">
+					<span><a href="#home">home</a> </span>
+				</section>
+				<section title="profile">
+					<span><a href="#profile">profile</a> </span>
+				</section>
+				<section title="train">
+					<span><a href="#train">train</a> </span>
+					<ul>
+						<li><a href="#calendar">Calendar</a></li>
+						<li>Goals</li>
+					</ul>
+				</section>
+				<section title="connect">
+					<span><a href="#connect">connect</a> </span>
+					<ul>
+						<li>People</li>
+						<li>Challenges</li>
+						<li>Groups</li>
+						<li>Races &amp; Events</li>
+					</ul>
+				</section>
+				<section title="add">
+					<span><a href="#add">add</a> </span>
+					<ul>
+						<li>Workout</li>
+						<li>Race Results</li>
+						<li>Food</li>
+					</ul>
+				</section>
+				
+			</nav>
+		</header>
+		<footer> </footer>
+		<div id="main" role="main">
+			<section>
+				<nav id="menu" class="open">
+                    <div class="settingsmenu clearfix">
+                        <h1>My Profile</h1>
+                        <ul>
+                            <li><a href="#settingsDetails">Profile</a></li>
+                            <li><a href="#settingsAccount">Account</a></li>
+                            <li><a href="#settingsPreferences">Preferences</a></li>
+                            <li><a href="#settingsDevices">Devices</a></li>
+                        </ul>
+                    </div>
+				</nav>
+			</section>
+			
+            
+          <div class="settingspane">  
+		  <section id="maindetails">
+			<section id="settingsDetails" class="clearfix">
+					<section class="left">
+						<section id="profileUserAvatar">
+                        	<header><h2>Profile Photo</h2></header>
+                        	<img src="images/fpo_profile.jpg" alt="Holly S." title="Holly S."/>
+                            <p><a href="#" class="addNewPhoto" title="Change your profile photo" hidden>Add new photo</a></p>
+                        </section>
+					</section>
+					<section class="right">
+						<header><h2>My Information</h2></header>
+                        <form class="form">
+						<div class="datafield large">
+							<input type="text" value="Lorem Ipsum" id="name"/>
+							<label for="name">Name</label>
+						</div>	
+						<div class="datafield large">
+							<input type="text" value="Portland, OR" id="citystate"/>
+							<label for="citystate">Location (City, ST)</label>
+						</div>	
+						<div class="datafield large">
+                        	<fieldset id="distanceunits">
+                            	<label for="kilometers">Kilometers</label>
+                                <input type="radio" value="Kilometers" name="units" id="kilometers"/>
+                                <label for="miles" class="milesLabel">Miles</label>
+                                <input type="radio" value="Miles" name="units" id="miles" checked />
+                                <legend>Distance Units</legend>
+                            </fieldset>
+						</div>	
+						<div class="datafield large">
+                            <fieldset id="gender">
+                            	<label for="male">Male</label>
+                                <input type="radio" value="Male" name="gender" id="male" checked />
+                            	<label for="female" class="femaleLabel">Female</label>
+                                <input type="radio" value="Female" name="gender" id="female" />
+                                
+                                <legend>Gender</legend>
+                            </fieldset>
+						</div>
+                        </form>
+                        <section id="whoami">
+                        	<header><h2>I&#8127;m a &#8230;</h2></header>
+                            <form>
+                                <input type="text" class="wide datafield" id="whoamiform" value="Tell us who you are. Separate with commas." />
+                            </form>
+                            <span><a href="#">X</a> Weekend Warrior</span> <span><a href="#">X</a> Gym Rat</span> <span><a href="#">X</a> Runner</span>
+                        </section>
+					</section>
+			  </section>
+              
+              <section id="settingsAccount" class="">
+					<section>
+                        <form class="form">
+						<div class="datafield large">
+							<input type="text" value="Lorem Ipsum" id="username"/>
+							<label for="username">Username</label>
+						</div>	
+						<div class="datafield large">
+							<input type="text" value="lipsum@gmail.com" id="email"/>
+							<label for="email">Email Address</label>
+						</div>
+						<div class="datafield large">
+                        	<input type="password" value="*******" id="password"/>
+							<label for="password">New Password</label>
+						</div>	
+						<div class="datafield large">
+                            <input type="password" value="*******" id="verifypassword"/>
+							<label for="verifypassword">Retype Password</label>
+						</div>
+                        </form>
+                        
+				  </section>
+              </section>
+              <section id="settingsPreferences" class="clearfix">
+					<section class="left">
+						<section id="profileUserAvatar">
+                        	<header><h2>Share My Entries With</h2></header>
+                            <div id="TwitterBtn"><a href="#">Connect with Twitter</a></div>
+                        	<p>Linked to <a name="linkedAcct">Lorem Ipsum</a>. (<a href="#">unlink</a>)</p>
+                            <div id="FacebookBtn"><a href="#">Connect with Facebook</a></div>
+                            <p>Linked to <a name="linkedAcct">Lorem Ipsum</a>. (<a href="#">unlink</a>)</p>
+                        </section>
+					</section>
+					<section class="right">
+						<header><h2>Notify Me When Someone</h2></header>
+                        <p>Emails will be sent to lipsum@gmail.com (<a href="#">edit</a>) when someone:</p>
+                        <form>
+                        	<fieldset>
+                            	<div class="left">
+                                    <p><input id="follows" type="checkbox" value="1" checked />
+                                    <label for="follows">Follows me</label></p>
+                                    <p><input id="comments" type="checkbox" value="3" />
+                                    <label for="comments">Comments on My Post</label></p>
+                                    <p><input id="commentsafter" type="checkbox" value="5" />
+                                    <label for="commentsafter">Comments After Me</label></p>
+                                </div>
+                            	<div class="right">
+                                    <p><input id="mentions" type="checkbox" value="2" checked />
+                                    <label for="mentions">Mentions me</label></p>
+                                    <p><input id="likes" type="checkbox" value="4" checked />
+                                    <label for="likes">Likes My Post</label></p>
+                                </div>
+                            </fieldset>
+                        </form>
+					</section>
+				</section>
+                <section id="settingsDevices">
+					<section class="clearfix">
+                        <form class="form">
+						<div class="datafield large">
+                        	<div class="deviceInfo"><h2>Garmin</h2><p>Device Type</p></div>
+                            <div class="deviceLoginUser">
+                                <input type="text" value="Lorem Ipsum" id="username"/>
+                                <label for="username">Username</label>
+                            </div>
+						</div>	
+						<div class="datafield large">
+                        	<div class="deviceEnable"><input type="checkbox" id="device0"/><label for="device0">Enable Account</label></div>
+                            <div class="deviceLoginPwd">
+                                <input type="password" value="*******" id="password"/>
+                                <label for="verifypassword">Password</label>
+                            </div>
+						</div>
+                        </form>
+                        
+				  </section>
+                  
+                  <section class="clearfix">
+                        <form class="form">
+						<div class="datafield large">
+                        	<div class="deviceInfo"><h2>Nike+</h2><p>Device Type</p></div>
+                            <div class="deviceLoginUser">
+								<input type="text" value="Lorem Ipsum" id="username"/>
+								<label for="username">Username</label>
+                            </div>
+						</div>	
+						<div class="datafield large">
+                        	<div class="deviceEnable"><input type="checkbox" id="device1"/><label for="device1">Enable Account</label></div>
+                            <div class="deviceLoginPwd">
+                            	<input type="password" value="*******" id="password"/>
+								<label for="verifypassword">Password</label>
+                            </div>
+						</div>
+                        </form>
+                        
+				  </section>
+				</section>
+            </section>
+			<footer class="loginbg">
+                  <a href="#" onClick="reset();" style="">Cancel</a> <a href="#"
+                        onclick="reset();" style="">Save Changes</a>
+            </footer>
+            
+            </div>
+		</div>
+		
+				
+	</div>
+	<!--! end of #container -->
+	<div id="modalbg"></div>
+	<div id="modalclose"></div>
+</body>
+</html>

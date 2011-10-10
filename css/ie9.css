@@ -1,0 +1,8 @@
+.day #menu>.datepicker {
+	font-size: 20px;
+}
+
+.day #menu .chzn-container-single .chzn-single {
+	background-image: none !important;
+	filter:none;
+}

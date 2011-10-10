@@ -1,0 +1,214 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Create An Account</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- removed for now to improve iPhone compatibilty 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+-->
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<!-- <link rel="stylesheet" href="css/jqueryui/jquery-ui-1.8.16.custom.css"> -->
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie8.css">
+
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script src="js/main.js"></script>
+</head>
+<body>
+	<div id="container">
+		
+		<header>	
+			<section id="accountNav" class="hidden">
+				<img src="images/profilephoto.png" /><a href="#">logout</a> <a
+					href="#">settings</a><span>hello, <b>lorem</b> </span>
+			</section>
+
+			<nav id="mainNav">
+				<div id="logo"></div>
+				<section title="home">
+					<span><a href="#home">home</a> </span>
+				</section>
+				<section title="profile" >
+					<span><a href="#profile">profile</a> </span>
+				</section>
+				<section title="train" >
+					<span><a href="#train">train</a> </span>
+					<ul>
+					  <li><a href="#calendar">Calendar</a></li>
+						<li>Goals</li>
+				  </ul>
+			  </section>
+				<section title="connect">
+					<span><a href="#connect">connect</a> </span>
+					<ul>
+					  <li>People</li>
+						<li>Challenges</li>
+						<li>Groups</li>
+						<li>Races &amp; Events</li>
+				  </ul>
+			  </section>
+				<section title="add">
+					<span><a href="#add">add</a> </span>
+					<ul>
+					  <li>Workout</li>
+						<li>Race Results</li>
+						<li>Food</li>
+				  </ul>
+			  </section>
+			</nav>
+			<div id="main" role="main">
+					<nav id="menu">
+					<section class="head">
+								<section class="inactive">
+									<h1>Create An Account</h1>
+									<h2>You can connect information from other accounts, or create one from scratch</h2>
+								</section>
+						
+														</section>
+								<!-- #menu>ul>li.icon>ul -->
+								<ul>
+									<li class="loginicon accountButton" id="facebook"><img src="images/NewAccountLogos/icon_facebook.png">
+										<p>Facebook</p>								
+								  </li> 
+								</ul>
+								<ul>
+									<li class="loginicon accountButton" id="twitter"><img src="images/NewAccountLogos/icon_twitter.png">
+										<p>Twitter</p>									
+								  </li>
+								</ul>
+								<ul>
+									<li class="loginicon accountButton" id="google"><img src="images/NewAccountLogos/icon_google.png">
+										<p>Google</p>											
+								  </li>
+								</ul>
+								<ul>
+									<li class="loginicon accountButton" id="linkedin"><img src="images/NewAccountLogos/icon_linkedin.png">
+										<p>LinkedIn</p>	
+									
+								  </li>
+								</ul>
+								<!-- second row -->
+								<ul>
+									<li class="loginicon accountButton" id="yahoo"><img src="images/NewAccountLogos/icon_yahoo.png">
+										<p>Yahoo!</p>	
+									
+								  </li>
+								</ul>
+								<ul>
+									<li class="loginicon accountButton" id="aol"><img src="images/NewAccountLogos/icon_aol.png">
+										<p>Aol.</p>	
+						
+								  </li>
+								</ul>
+								<ul>
+							<!-- this is the only loginicon that needs the dropdownsheet, make this a different class and trigger on that -->
+									<li class="loginicon wide accountButton" id="bia"><img src="images/NewAccountLogos/icon_bia.png">
+										<p>New Bia Account</p>	
+									
+								  </li>
+								</ul>
+								
+					</section>
+					</nav>
+								</div>
+		</header>
+		<footer> </footer>
+		
+<!-- bia login screen -->
+<div id="loginpane" class="hidden">
+<section id="loginsheet">
+<div class="sheetheader">
+				<h1>Create Your Account</h1>
+				<h2>You can connect information from other accounts, or create one using your own information.</h2>
+</div>
+<div class="datafield large editable">
+							<p>
+								<input type="email" value="loren@ipsum.com" class="logincolor"  id="firstfield"/>
+							</p>
+							<p>
+								Email Address
+							</p>
+	  </div>
+						<div class="datafield large editable ">
+							<p>
+								<input type="text" value="loren"  class="logincolor"/>
+							</p>
+							<p>
+								First Name
+							</p>
+						</div>
+						<div class="datafield large editable">
+							<p>
+								<input type="text" value="Ipsum" class="logincolor"/>
+							</p>
+							<p>
+								Last Name
+							</p>
+						</div>
+						<div class="datafield large editable ">
+							<p>
+								<input type="password" value="lipsum"  class="logincolor"/>
+							</p>
+							<p>
+								Password
+							</p>
+						</div>
+						<div class="datafield large editable ">
+							<p>
+								<input type="password" value="lipsum"  class="logincolor"/>
+							</p>
+							<p>
+								Retype Password
+							</p>
+						</div>
+						<div class="datafield large editable ">
+							<p>
+								<input type="text" value="lipsum"  class="logincolor"/>
+							</p>
+							<p>
+								Username
+							</p>
+						</div>
+						<div class="checkboxfield">
+							<p>
+								<input type="checkbox" value="lipsum" checked />					
+								I accept the <a href="#" target="_blank">Terms of Use</a></p>
+						</div>
+	</section>
+			<footer class="loginbg">
+			
+					<a href="#" onClick="reset();" style="">Cancel</a> <a href="registration_successful.html"
+						onclick="reset();" style="">Let's Start</a>
+				</footer>
+</div>
+
+</div>
+<!--! end of #container -->
+<div id="blackbox" class="hidden">
+	</div> <!-- blackbox -->
+</body>
+</html>

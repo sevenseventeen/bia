@@ -1,0 +1,504 @@
+<!doctype html>
+<!-- this page layout forked from home page -->
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Train Goals</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jqueryui/jquery-ui-1.8.16.custom.css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie8.css">
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+
+</head>
+<body>
+
+	<div id="container" class="home">
+	<header>
+			<section id="accountNav">
+				<img src="images/profilephoto.png" /><a href="#">logout</a> <a
+					href="#">settings</a><span>hello, <b>lorem</b> </span>
+			</section>
+
+			<nav id="mainNav">
+				<div id="logo"></div>
+				<section title="home">
+					<span><a href="#home">home</a> </span>
+				</section>
+				<section title="profile">
+					<span><a href="#profile">profile</a> </span>
+				</section>
+				<section title="train" class="active">
+					<span><a href="#train">train</a> </span>
+					<ul>
+						<li><a href="#calendar">Calendar</a></li>
+						<li>Goals</li>
+					</ul>
+				</section>
+				<section title="connect">
+					<span><a href="#connect">connect</a> </span>
+					<ul>
+						<li>People</li>
+						<li>Challenges</li>
+						<li>Groups</li>
+						<li>Races &amp; Events</li>
+					</ul>
+				</section>
+				<section title="add">
+					<span><a href="#add">add</a> </span>
+					<ul>
+						<li>Workout</li>
+						<li>Race Results</li>
+						<li>Food</li>
+					</ul>
+				</section>
+				
+			</nav>
+		</header>
+		<footer> </footer>
+		<div id="main" role="main">
+			<!-- 
+		<div class="hoverCircle">
+			<img class="circleCenter" src="images/weather_sun.png"/>
+			<img class="circleIcon" src="images/weather_sun.png"/>
+			<img class="circleIcon" src="images/weather_sun.png"/>
+			<img class="circleIcon" src="images/weather_sun.png"/>
+		</div>
+ -->
+ 		<!-- each section follows in succession -->	
+ 		<!-- Version 2: To try to improve the shadowbox performance, each state is divided into multiple pieces to fit in each section: menu, detail, footer. Each state has its own class so control using classes not ids. -->		
+<!-- states:
+		.whatgoal
+		.goaltype 		
+ 		.choosetype
+ 		.enterinfo
+ -->
+		<section>
+					<!-- menu section -->
+				   <header class="menu">
+							<section class="whatgoal">							
+									<h1>What goal would you like to set?</h1>
+									<form>
+											<p><input type="text" class="wide datafield" id="whatgoalwouldyoulike" value="Example: Run 500 miles this year; Workout 4x/week" />
+											</p>
+											<p class="datalegend "><input type="text" id="date_icon" value="Choose a Date" class="datafield plain"></p>
+									</form>
+							</section>
+							<section class="goaltype hidden">
+									<h1>I will win ALL THE THINGS.</h1>		
+									<p class="datalegend "><input type="text" value="Tuesday, July 12th, 2011" class="datafield plain date"></p>
+								<!-- was: #menu>ul>li.icon>ul  now .menu>section>ul>li.loginicon-->
+																				<ul>
+											<li class="loginicon typeofgoal" id="distance"><img src="images/icons/icon_train_coverdistance.png">
+												<p>Cover a Distance</p>									
+										  </li>
+										</ul>
+										<ul>
+											<li class="loginicon typeofgoal" id="workout"><img src="images/icons/icon_train_workoutmore.png">
+												<p>Workout More</p>											
+										  </li>
+										</ul>
+										<ul>
+											<li class="loginicon typeofgoal" id="race"><img src="images/icons/icon_train_race.png">
+												<p>Race</p>								
+										  </li> 
+										</ul>
+										<ul>
+											<li class="loginicon typeofgoal" id="weight"><img src="images/icons/icon_train_loseweight.png">
+												<p>Lose Weight</p>	
+											
+										  </li>
+										</ul>																
+							</section>							
+							<section class="racegoal hidden">
+								<h2>Race Type</h2>
+									<h1>I will win ALL THE THINGS.</h1>		
+									<p class="datalegend "><input type="text" value="Tuesday, July 12th, 2011" class="datafield plain date"></p>
+									<ul>
+										<li class="icon" id="race"><img src="images/icons/icon_train_run.png">
+											<p>Run</p>		
+											<ul>
+												<li>5k</li>
+												<li>10k</li>
+												<li>Marathon</li>
+												<li>Marathon Other</li>									
+											</ul>
+																	
+									  </li> 
+									</ul>								
+									<ul>
+										<li class="icon" id="bike"><img src="images/icons/icon_train_bike.png">
+											<p>Bike</p>
+											<ul>
+												<li>Century</li>											
+												<li>Other</li>									
+											</ul>								
+									  </li> 
+									</ul>
+									<ul>
+										<li class="icon" id="swim"><img src="images/icons/icon_train_swim.png">
+											<p>Swim</p>		
+											<ul>
+												<li>Open Water</li>											
+												<li>Pool</li>									
+											</ul>											
+									  </li> 
+									</ul>
+									<ul>
+										<li class="icon" id="triathlon"><img src="images/icons/icon_train_triathlon.png">
+											<p>Triathlon</p>			
+											<ul>
+												<li>Sprint</li>											
+												<li>Olympic</li>
+												<li>Half-Ironman</li>
+												<li>Ironman</li>									
+											</ul>										
+									  </li> 
+									</ul>
+									<ul>
+										<li class="icon" id="othermultisport"><img src="images/icons/icon_train_othermultisport.png">
+											<p>Other Multisport</p>		
+											<ul>
+												<li>Duathlon</li>											
+												<li>Aquathlon</li>	
+												<li>Aquabike</li>								
+											</ul>											
+									  </li> 
+									</ul>									
+							</section>			
+							<!-- now doing with a single section -->				
+							<section class="racegoalinfo distancegoalinfo domoregoalinfo loseweightgoalinfo hidden">
+								<!-- Replacing:
+								<h2>Race Type</h2>
+								<h2>Distance</h2>
+								<h2>Do More</h2>
+								<h2>Lose Weight</h2> -->
+								<h2 id="myGoalType">My Goal</h2>
+									<h1 id="myGoal">I will win ALL THE THINGS.</h1>									
+									<p class="datalegend"><input type="text" value="Tuesday, July 12th, 2011" class="datafield plain date" id="myDate" ></p>
+							</section>	
+															
+				    </header>
+					<!-- detail section -->
+							<section class="detail hidden">
+									<h1>Detail Goes here</h1>
+								</section>
+							<section class="detail racegoalinfo hidden">
+								<div class="datafield  large split ">
+												<div class="uneditable splitleft">
+													<p>Marathon</p>
+													<p> Race Type </p>
+													</div>
+												<div class="editable splitright">
+													<p> <input id="target_time" type="text" value="Just finish!"  class="traincolor"   id="firstfield"/> </p>
+													<p class="stopwatch" id="stopwatch"> or choose a Target Time </p>					
+											    </div>
+											    <div class="popup_dlog hidden" id="stopwatch_popup">
+											    	<h2>Target Time (HH:MM:SS)</h2>
+											    	<ul>
+											    	<li>
+											    	<input type="text" name="hrs" id="hrs" value="00" class="time_display traincolor" maxlength="2">:
+											    	<input type="text" name="mins" id="mins" value="00" class="time_display traincolor" maxlength="2">:
+											    	<input type="text" name="secs" id="secs" value="00" class="time_display traincolor" maxlength="2">
+											    	</li>
+											    	<img src="images/button_enterTime.png" id="enterTime_button"/>
+											    	</ul>
+											    </div>		
+								</div>
+								<div class="datafield large editable">
+								<p> <input type="text" value="SF Marathon"  class="traincolor"/> </p>
+								<p>Name of Race</p>						
+							</div>
+							</section>	
+							<section class="detail distancegoalinfo hidden">							
+									<div class="datafield  large split3">
+													<div class="editable splitleft3">
+														<p><input id="distance" type="text" value="300"  class="traincolor"   id="firstfield"/></p>
+														<p class="distance_icon"> Distance</p>
+														</div>
+													<div class="uneditable  splitright3">	
+														<p class="dropdowntext" id="distance_unit_text"> Miles</p>
+														 <div class="dropdown" id="distance_unit">
+														 <ul class="dropdown_menu hidden " id="distance_unit_menu">
+														<li title="Kilometers">Kilometers</li>
+														<li title="Miles" class="selected">Miles</li>												
+														</ul>
+														</div>
+														<p >Distance Unit</p>					
+													</div>
+									</div>
+									<div class="datafield  large split " id="row5">
+													<div class="split5 run" id="distance_run">
+														<p>Run</p>																						
+														</div>
+														<div  class="popup_dlog hidden" id="distance_run_popup">
+															<div class="closebox">
+																	<img src="images/icons_small/icon_closebox.png"/>
+																</div>
+															<h2>Run Type</h2>
+															<ul>
+															<li><input  id="distance_run_1" type="checkbox" name="outdoor" value="outdoor" ><label for "outdoor">Outdoor Run</label></li>
+															<li><input   id="distance_run_2" type="checkbox" name="treadmill" value="treadmill"><label for "treadmill">Treadmill</label></li>
+															<li><input   id="distance_run_3" type="checkbox" name="track" value="track"><label for "track">Track</label></li>
+															</ul>
+															
+														</div>								
+													<div class=" split5 walk"  id="distance_walk">										
+														<p> Walk</p>																	
+												    </div>
+												    <div class="popup_dlog hidden" id="distance_walk_popup">
+												    	<div class="closebox">
+												    			<img src="images/icons_small/icon_closebox.png"/>
+												    		</div>
+												    		<h2>Walk Type</h2>
+												    	<ul>
+												    	<li><input id="distance_walk_1"  type="checkbox" name="walk" value="walk" ><label for "walk">Walk</label></li>
+												    	<li><input  id="distance_walk_2" type="checkbox" name="hike" value="hike"><label for "hike">Hike</label></li>
+												    	</ul>
+												    </div>
+												    <div class=" split5 swim"  id="distance_swim">
+												<p> Swim</p>					
+												    </div>
+												    <div class="popup_dlog hidden" id="distance_swim_popup">
+												    	<div class="closebox">
+												    			<img src="images/icons_small/icon_closebox.png"/>
+												    		</div>
+												    		<h2>Swim Type</h2>
+												    	<ul>
+												    	<li><input  id="distance_swim_1" type="checkbox" name="pool" value="pool" ><label for "pool">Pool</label></li>
+												    	<li><input  id="distance_swim_2" type="checkbox" name="wetsuit" value="wetsuit"><label for "wetsuit">Open Water (Wetsuit)</label></li>
+												    <li><input  id="distance_swim_3" type="checkbox" name="skin" value="skin"><label for "skin">Open Water (Skin)</label></li>
+												    	</ul>
+												    </div>  
+												    <div class=" split5 bike"  id="distance_bike">
+												    	<p> Bike</p>															 													
+												       </div>
+												       <div class="popup_dlog hidden" id="distance_bike_popup">
+												       	<div class="closebox">
+												       			<img src="images/icons_small/icon_closebox.png"/>
+												       		</div>
+												       		<h2>Bike Type</h2>
+												       	<ul>
+												       	<li><input  id="distance_bike_1" type="checkbox" name="roadbike" value="roadbike" ><label for "roadbike">Road Bike</label></li>
+												       	<li><input  id="distance_bike_2" type="checkbox" name="mountainbike" value="mountainbike"><label for "mountainbike">Mountain Bike</label></li>
+												       	<li><input  id="distance_bike_3"  type="checkbox" name="spin" value="spin"><label for "spin">Spin</label></li>
+												       	</ul>
+												       </div>												       
+												    <div class=" split5 all"  id="distance_all">
+												    	<p> Select All</p>					
+												    </div>
+									</div>
+									
+							</section>	
+							<section class="detail domoregoalinfo hidden">
+									<div class="datafield  large split3">
+													<div class="editable splitleft3">
+														<p><input id="amount" type="text" value="4"  class="traincolor"   id="firstfield"/></p>
+														<p> Amount</p>
+														</div>
+													<div class="uneditable splitright3">
+														<p class="dropdowntext" id="interval_text"> Hours per Week</p>
+														 <div class="dropdown" id="interval">
+														 <ul class="dropdown_menu hidden " id="interval_menu">														
+														<li title="Times per Week">Times per Week</li>
+														<li  title="Hours per Week" class="selected">Hours per Week</li>
+														<li title="Times per Month">Times per Month</li>
+														<li title="Hours per Month">Hours per Month</li>
+														</ul>
+														</div>
+														<p >Unit of Measure</p>					
+												    </div>
+									</div>
+									<div class="datafield  large split" id="row8">
+													<div class="split8 run" id="more_run">
+														<p>Run</p>
+														</div>
+														<div class="popup_dlog hidden" id="more_run_popup">
+															<div class="closebox">
+																	<img src="images/icons_small/icon_closebox.png"/>
+																</div>
+																<h2>Run Type</h2>
+															<ul>
+															<li><input  id="more_run_1" type="checkbox" name="outdoor" value="outdoor" ><label for "outdoor">Outdoor Run</label></li>
+															<li><input  id="more_run_2" type="checkbox" name="treadmill" value="treadmill"><label for "treadmill">Treadmill</label></li>
+															<li><input  id="more_run_3" type="checkbox" name="track" value="track"><label for "track">Track</label></li>
+															</ul>
+														</div>
+													<div class=" split8 walk" id="more_walk">
+														<p> Walk</p>																
+												    </div>
+												    <div class="popup_dlog hidden" id="more_walk_popup">
+												    	<div class="closebox">
+												    			<img src="images/icons_small/icon_closebox.png"/>
+												    		</div>
+												    		<h2>Walk Type</h2>
+												    	<ul>
+												    	<li><input   id="more_walk_1" type="checkbox" name="walk" value="walk" ><label for "walk">Walk</label></li>
+												    	<li><input    id="more_walk_2" type="checkbox" name="hike" value="hike"><label for "hike">Hike</label></li>
+												    	</ul>
+												    </div>
+												    <div class=" split8 swim" id="more_swim">
+												    	<p> Swim</p>					
+												    </div>
+												    <div class="popup_dlog hidden" id="more_swim_popup">
+												    	<div class="closebox">
+												    			<img src="images/icons_small/icon_closebox.png"/>
+												    		</div>
+												    		<h2>Swim Type</h2>
+												    	<ul>
+												    	<li><input   id="more_swim_1"  type="checkbox" name="pool" value="pool" ><label for "pool">Pool</label></li>
+												    	<li><input    id="more_swim_2" type="checkbox" name="wetsuit" value="wetsuit"><label for "wetsuit">Open Water (Wetsuit)</label></li>
+												    <li><input    id="more_swim_3" type="checkbox" name="skin" value="skin"><label for "skin">Open Water (Skin)</label></li>
+												    	</ul>
+												    </div>  
+												    <div class=" split8 bike" id="more_bike">
+												    	<p> Bike</p>					
+												    </div>
+												    <div class="popup_dlog hidden" id="more_bike_popup">
+												    	<div class="closebox">
+												    			<img src="images/icons_small/icon_closebox.png"/>
+												    		</div>
+												    		<h2>Bike Type</h2>
+												    	<ul>
+												    	<li><input    id="more_bike_1" type="checkbox" name="roadbike" value="roadbike" ><label for "roadbike">Road Bike</label></li>
+												    	<li><input    id="more_bike_2" type="checkbox" name="mountainbike" value="mountainbike"><label for "mountainbike">Mountain Bike</label></li>
+												    	<li><input    id="more_bike_3" type="checkbox" name="spin" value="spin"><label for "spin">Spin</label></li>
+												    	</ul>
+												    </div>
+												    <div class=" split8 cardio" id="more_cardio">
+												    	<p> Cardio</p>					
+												    </div>
+													<div class="popup_dlog hidden" id="more_cardio_popup">
+														<div class="closebox">
+																<img src="images/icons_small/icon_closebox.png"/>
+															</div>
+															<h2>Cardio Type</h2>
+														<ul>
+														<li><input    id="more_cardio_1" type="checkbox" name="elliptical" value="elliptical" ><label for "elliptical">Elliptical</label> </li>
+														<li><input    id="more_cardio_2" type="checkbox" name="cardio_other" value="cardio_other"><label for "cardio_other">Other</label></li>
+														</ul>
+													</div>
+													<div class=" split8 strength" id="more_strength">
+														<p> Strength</p>					
+													</div>
+													<div class="popup_dlog hidden" id="more_strength_popup">
+														<div class="closebox">
+																<img src="images/icons_small/icon_closebox.png"/>
+															</div>
+															<h2>Strength Type</h2>
+														<ul>
+														<li><input    id="more_strength_1" type="checkbox" name="weights" value="weights" ><label for "weights">Weights</label></li>
+														<li><input    id="more_strength_2"  type="checkbox" name="weightsother" value="weightsother"><label for "weightsother">Other</label></li>
+														</ul>
+													</div>
+													<div class=" split8 stretch" id="more_stretch">
+														<p> Stretch</p>					
+													</div>
+													<div class="popup_dlog hidden" id="more_stretch_popup">
+														<div class="closebox">
+																<img src="images/icons_small/icon_closebox.png"/>
+															</div>
+															<h2>Stretch Type</h2>
+														<ul>
+														<li><input   id="more_stretch_1"  type="checkbox" name="yoga" value="yoga" ><label for "yoga">Yoga</label></li>
+														<li><input    id="more_stretch_2" type="checkbox" name="pilates" value="pilates"><label for "pilates">Pilates</label></li>
+														</ul>
+													</div>
+													<div class=" split8 all" id="more_all">
+														<p> Select All</p>					
+													</div>
+									</div>
+									
+							</section>			
+							<section class="detail loseweightgoalinfo hidden">
+									
+							<div class="datafield large split ">
+											<div class="editable splitleft">
+												<p><input id="target_time" type="text" value="175"  class="traincolor"   id="firstfield"/> </p>
+												<p> Starting Weight </p>
+												</div>
+											<div class="uneditable  splitright">	
+												<p class="dropdowntext" id="weight_unit_text"> Pounds</p>
+												 <div class="dropdown" id="weight_unit">
+												 <ul class="dropdown_menu hidden " id="weight_unit_menu">
+												<li title="Kilos">Kilos</li>
+												<li title="Pounds" class="selected">Pounds</li>												
+												</ul>
+												</div>
+												<p >Weight Unit</p>					
+										    </div>
+							</div>
+							<div class="datafield  large split ">
+											<div class="editable splitleft">
+												<p> <input id="target_time" type="text" value="150"  class="traincolor"/> </p>
+												<p>Ending Weight</p>
+												</div>
+											<div class="uneditable splitright">
+												<p>1.5</p>
+												<p> Weight per Week </p>					
+										    </div>
+							</div>
+							</section>											
+				 <!-- footer section -->
+							<footer class="menufooter trainbg  hidden">
+								<a href="#" onclick="cancel();" style="">Cancel</a> 
+							</footer>	
+							<footer class="menufooter trainbg  racegoalinfo distancegoalinfo domoregoalinfo loseweightgoalinfo hidden">
+								<a href="#" onclick="cancel();" style="">Cancel</a> <a href="#"
+									onclick="setGoal();" style="">Set Goal</a>
+							</footer>	
+	</section>
+		<!-- next section -->						
+<!-- bia login screen -->
+<div id="goalset" class="hidden">
+<section id="loginsheet">
+<div class="sheetheader clearfix">
+				<h1>Goal Set!</h1>
+					<div class="goalmenu">						
+					<p>You can share this goal with your friends, if you want to.</p>
+					<p><a href="http://www.twitter.com"><img src="images/NewAccountLogos/button_shareWithTwitter.png"></a></p>
+						<p><a href="http://www.facebook.com"><img src="images/NewAccountLogos/button_shareOnFacebook.png"></a></p>
+				</div>
+			<p>Have another goal in mind? Let's set that up right now!</p>
+			<a href="train.html" ><img src="images/button_addGoal.png"/></a>
+			
+</div>	
+</section>						
+			<footer class="trainbg">
+			
+					<a href="index.html" class="last">Take Me Home!</a>
+				</footer>
+</div>
+	</div>
+	<!--! end of #container -->
+<div id="blackbox" class="hidden">
+	</div> <!-- blackbox -->
+
+	</body>
+	<!-- moved down here according to best practices -->
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+	
+	<script src="js/main.js"></script>
+</html>

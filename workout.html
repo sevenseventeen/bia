@@ -1,0 +1,267 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Add Workout</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jqueryui/jquery-ui-1.8.16.custom.css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie8.css">
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script src="js/main.js"></script>
+</head>
+<body>
+
+	<div id="container">
+		<img id="logo" src="images/logo.png" />
+		<header> </header>
+		<div id="main" role="main">
+			<!-- 
+		<div class="hoverCircle">
+			<img class="circleCenter" src="images/weather_sun.png"/>
+			<img class="circleIcon" src="images/weather_sun.png"/>
+			<img class="circleIcon" src="images/weather_sun.png"/>
+			<img class="circleIcon" src="images/weather_sun.png"/>
+		</div>
+ -->
+			<nav id="menu">
+				<section class="head">
+					<section class="inactive">
+						<h1>Choose your workout!</h1>
+						<h2>Good work, by the way.</h2>
+					</section>
+					<section class="addworkout">
+						<img class="icon" src="images/icon_run.png" />
+						<h1>Run 01</h1>
+						<input id="workoutname" type="text" value="Name my run">
+						<section class="datelocation">
+							<input id="date" type="text" value="Tuesday, July 12th, 2011" /><br />
+							<input type="text" id="location" value="Portland, OR" />
+						</section>
+						<div id="sync">Sync Device</div>
+					</section>
+				</section>
+				<ul>
+					<li class="icon"><img src="images/icon_run.png">
+						<p>Run</p>
+						<ul>
+							<li>Outdoor Run</li>
+							<li>Treadmill</li>
+							<li>Track</li>
+						</ul>
+					</li>
+					<li class="icon"><img src="images/icon_swim.png">
+						<p>Swim</p>
+						<ul>
+							<li>Pool</li>
+							<li>Open Water Skin</li>
+							<li>Open Water Wetsuit</li>
+						</ul>
+					</li>
+					<li class="icon"><img src="images/icon_bike.png">
+						<p>Bike</p>
+						<ul>
+							<li>Road Bike</li>
+							<li>Mountain Bike</li>
+							<li>Spin</li>
+						</ul>
+					</li>
+					<li class="icon"><img src="images/icon_walk.png">
+						<p>Walk</p>
+						<ul>
+							<li>Walk</li>
+							<li>Hike</li>
+						</ul>
+					</li>
+					<li class="icon"><img src="images/icon_cardio.png">
+						<p>Cardio</p>
+						<ul>
+							<li>Elliptical</li>
+							<li>Other</li>
+						</ul>
+					</li>
+					<li class="icon"><img src="images/icon_strength.png">
+						<p>Strength</p>
+						<ul>
+							<li>Weights</li>
+							<li>Other</li>
+						</ul>
+					</li>
+					<li class="icon"><img src="images/icon_stretch.png">
+						<p>Stretch</p>
+						<ul>
+							<li>Yoga</li>
+							<li>Pilates</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<section id="detail">
+				<section id="workoutdata">
+					<section class="left">
+						<div class="datafield large editable">
+							<p>
+								<input type="text" value="0" />
+							</p>
+							<p>
+								<img src="images/icon_distance_inactive.png" />mi
+							</p>
+						</div>
+						<div class="datafield large editable">
+							<p>
+								<input type="text" value="0:00:00" />
+							</p>
+							<p>
+								<img src="images/icon_time_inactive.png" />min
+							</p>
+						</div>
+						<div class="datafield large uneditable">
+							<p>0:00</p>
+							<p>
+								<img src="images/icon_milepace_inactive.png" />min/mi
+							</p>
+						</div>
+						<div class="datafield small uneditable">
+							<p>0:00</p>
+							<div id="editweight_wr"><p>Edit weight</p><input size=3></div>
+							<p>
+								<img src="images/icon_cal_inactive.png" />cal
+							</p>
+						</div>
+						<div class="datafield small uneditable">
+							<p>0:00</p>
+							<p>
+								<img src="images/icon_hrm_inactive.png" />HPM
+							</p>
+						</div>
+					</section>
+					<section class="right">
+						<h2>My run was</h2>
+						<textarea placeholder="Tell us about your workout!"></textarea>
+						<div id="addMoodBtn" class="button">
+							<img src="images/icon_ok_white.png" />Add
+						</div>
+						<div id="addMood" class="hoverCircle">
+							<img class="circleIcon" title="Excellent" src="images/icon_excellent_white.png" />
+							<img class="circleIcon" title="Good" src="images/icon_good_white.png" /> <img
+								class="circleIcon" title="OK" src="images/icon_ok_white.png" /> <img
+								class="circleIcon" title="Bad" src="images/icon_bad_white.png" /> <img
+								class="circleIcon" title="Worst" src="images/icon_worst_white.png" />
+						</div>
+						<div id="share">
+							Share this workout <img src="images/icon_facebook.png" /><input type="checkbox"/><img
+								src="images/icon_twitter.png" /><input type="checkbox"/>
+						</div>
+					</section>
+				</section>
+				<section id="addmore">
+					<nav id="addmore_header"></nav>
+					<section id="addmoredata">
+						<section class="top">
+							<section class="left">
+								<h1 style="background-image: url(images/icon_routes_small.png);">My
+									Routes</h1>
+								<div class="button" id="addRouteBtn">
+									<p>Add Route</p>
+								</div>
+							</section>
+							<section class="right">
+								<h1 style="background-image: url(images/icon_message.png);">Workout
+									Details</h1>
+								<textarea placeholder="Details such as sets and reps." id="workoutDetails"></textarea>
+								<p id="workoutPrivate"><input type="checkbox" id="private"><label for="private">Keep my workout details private</label></p>
+								<h1
+									style="background-image: url(images/icon_weather_small.png);">Weather</h1>
+								<div id="addWeatherBtn" class="button">
+									<img src="images/icon_sunny_white.png" />Add
+								</div>
+								<div id="addWeather" class="hoverCircle">
+									<img class="circleIcon" title="Sunny" src="images/icon_sunny_white.png" /> <img
+										class="circleIcon" title="Partly Cloudy" src="images/icon_partlycloudy_white.png" />
+									<img class="circleIcon" title="Cloudy" src="images/icon_cloudy_white.png" />
+									<img class="circleIcon" title="Rain" src="images/icon_rain_white.png" /> <img
+										class="circleIcon" title="Snow" src="images/icon_snow_white.png" /> <img
+										class="circleIcon" title="Thunderstorms" src="images/icon_tstorms_white.png" /><img
+										class="circleIcon" title="Wind" src="images/icon_wind_white.png" /><img
+										class="circleIcon" title="Tornado" src="images/icon_tornado_white.png" /><img
+										class="circleIcon" title="Ice" src="images/icon_ice_white.png" /><img
+										class="circleIcon" title="Clear Night" src="images/icon_clearnight_white.png" />
+								</div>
+								<div id="weatherDetails">
+									<p id="temperature_wr">
+										<input id="temperature" value="0" />&deg;F
+									</p>
+									<p>
+										<input id="weatherDesc" placeholder="Describe it - hot, humid...">
+									</p><!-- 
+									<p>
+										Humidity:<input id="humidity" value="0">%
+									</p> -->
+								</div>
+							</section>
+						</section>
+						<section class="bottom">
+							<section class="left">
+								<h1 style="background-image: url(images/icon_photo_small.png);">Photos</h1>
+								<div class="button" id="addPhotoBtn">
+									<p>Add Photo</p>
+								</div>
+							</section>
+							<section class="right">
+								<h1 style="background-image: url(images/icon_video_small.png);">Videos</h1>
+								<div class="button" id="addVideoBtn">
+									<p>Add Video</p>
+								</div>
+							</section>
+						</section>
+
+					</section>
+				</section>
+				<footer class="addbg">
+									<a href="#" onclick="reset();" style="">Cancel</a> <a href="#"
+						onclick="reset();" style="">Submit</a>
+				</footer>
+				<section class="modal" id="addRouteModal">
+					<h1>Upload a route</h1>
+				</section>
+				<section class="modal" id="addPhotoModal">
+					<h1>Upload a photo</h1>
+					<img src="images/photoplaceholder.png" />
+				</section>
+				<section class="modal" id="addVideoModal">
+					<h1>Upload a video</h1>
+				</section>
+			</section>
+		</div>
+		<footer> </footer>
+	</div>
+	<!--! end of #container -->
+	<div id="modalbg"></div>
+	<div id="modalclose"></div>
+</body>
+</html>

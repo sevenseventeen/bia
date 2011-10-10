@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>My Profile (forked from new Home Page design)</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/jqueryui/jquery-ui-1.8.16.custom.css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="css/ie8.css">
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script src="js/main.js"></script>
+
+</head>
+<body>
+
+	<div id="container" class="home">
+	<header>
+			<section id="accountNav">
+				<img src="images/profilephoto.png" /><a href="#">logout</a> <a
+					href="#">settings</a><span>hello, <b>lorem</b> </span>
+			</section>
+
+			<nav id="mainNav">
+				<div id="logo"></div>
+				<section title="home">
+					<span><a href="#home">home</a> </span>
+				</section>
+				<section title="profile">
+					<span><a href="#profile">profile</a> </span>
+				</section>
+				<section title="train">
+					<span><a href="#train">train</a> </span>
+					<ul>
+						<li><a href="#calendar">Calendar</a></li>
+						<li>Goals</li>
+					</ul>
+				</section>
+				<section title="connect">
+					<span><a href="#connect">connect</a> </span>
+					<ul>
+						<li>People</li>
+						<li>Challenges</li>
+						<li>Groups</li>
+						<li>Races &amp; Events</li>
+					</ul>
+				</section>
+				<section title="add">
+					<span><a href="#add">add</a> </span>
+					<ul>
+						<li>Workout</li>
+						<li>Race Results</li>
+						<li>Food</li>
+					</ul>
+				</section>
+				
+			</nav>
+		</header>
+		<footer> </footer>
+		<div id="main" role="main">
+			<section>
+				<nav id="menu" class="open">
+                    <div class="settingsmenu clearfix">
+                        <h1>My Profile</h1>
+                        <ul>
+                            <li><a href="settings.html">Profile</a></li>
+                            <li class="selected"><a href="#">Account</a></li>
+                            <li><a href="settings_preferences.html">Preferences</a></li>
+                            <li><a href="settings_devices.html">Devices</a></li>
+                        </ul>
+                    </div>
+				</nav>
+			</section>
+			
+            
+            
+				<div class="profilepane">
+				<section id="maindetails">
+                <section id="settingsDevices" class="">
+					<section class="padding-bottom:55px; clearfix">
+                        <form class="form">
+						<div class="datafield large">
+                        	<div class="deviceInfo"><h2>Garmin</h2><p>Device Type</p></div>
+                            <div class="deviceLoginUser">
+                                <input type="text" value="Lorem Ipsum" id="username"/>
+                                <label for="username">Username</label>
+                            </div>
+						</div>	
+						<div class="datafield large">
+                        	<div class="deviceEnable"><input type="checkbox" id="device0"/><label for="device0">Enable Account</label></div>
+                            <div class="deviceLoginPwd">
+                                <input type="password" value="*******" id="password"/>
+                                <label for="verifypassword">Password</label>
+                            </div>
+						</div>
+                        </form>
+                        
+				  </section>
+                  
+                  <section>
+                        <form class="form">
+						<div class="datafield large">
+                        	<div class="deviceInfo"><h2>Nike+</h2><p>Device Type</p></div>
+                            <div class="deviceLoginUser">
+								<input type="text" value="Lorem Ipsum" id="username"/>
+								<label for="username">Username</label>
+                            </div>
+						</div>	
+						<div class="datafield large">
+                        	<div class="deviceEnable"><input type="checkbox" id="device1"/><label for="device1">Enable Account</label></div>
+                            <div class="deviceLoginPwd">
+                            	<input type="password" value="*******" id="password"/>
+								<label for="verifypassword">Password</label>
+                            </div>
+						</div>
+                        </form>
+                        
+				  </section>
+				</section>
+                </section>
+                <footer class="loginbg">
+                    <a href="#" onClick="reset();" style="">Cancel</a> <a href="#"
+                        onclick="reset();" style="">Save Changes</a>
+                </footer>
+                </div>
+            </section>
+			
+		</div>
+		
+				
+	</div>
+	<!--! end of #container -->
+	<div id="modalbg"></div>
+	<div id="modalclose"></div>
+</body>
+</html>
