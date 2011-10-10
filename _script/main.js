@@ -25,6 +25,13 @@ $(function() {
 
 // end data object //
 
+// profile on ready //
+$(".settingspane>section>section").hide();
+$("#menu .settingsmenu li:first").addClass("selected");	
+$("#maindetails>section:first").addClass("visible").slideDown("slow");
+	
+// end profile on ready //
+
 // Mouse Outside Click code (for popup box)
 var mouse_is_inside = false;
 
@@ -158,7 +165,7 @@ $(function() {
 	}
 	
 	// GLOBALLY clears input when clicking into form fields. If you will be populating fields from the database, you might want to remove this... //
-	var el = $('input[type=text], textarea');
+	var el = $('input[type=text],input[type=password],textarea');
 	    el.focus(function(e) {
 	        if (e.target.value == e.target.defaultValue)
 	            e.target.value = '';
@@ -210,6 +217,10 @@ $(".accountButton").bind("click", function(e) {
 	  		activate($(this), $go2url);
 	});
 
+//used on profile page //
+$("#menu .settingsmenu li").bind("click", function(e) {
+	slider($(this));
+});
 
 // Used on Goal Type //
 $(".typeofgoal").bind("click", function(e) {
@@ -427,6 +438,19 @@ function activate($icon, $go2url) {
 	$("#detail").addClass("visible");
 	$("#workoutname").focus();
 	}
+}
+
+function slider($mEvent) {
+	if( !$mEvent.is(".selected") ) {
+		$("#menu .settingsmenu li").removeClass("selected");
+		$mEvent.addClass("selected");
+		$("#maindetails>section.visible").slideUp("slow", function(t) {
+			$(this).removeClass("visible").hide();											  
+			var activeTab = $mEvent.find("a").attr("href");
+			$(activeTab).addClass("visible").slideDown("slow");
+		});
+	}
+	return false;
 }
 
 function dropsheet($accountButton, $go2url) {

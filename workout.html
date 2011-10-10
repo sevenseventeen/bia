@@ -10,12 +10,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/jqueryui/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" href="_style/normalize.css">
+<link rel="stylesheet" href="_style/main.css">
+<link rel="stylesheet" href="_style/jqueryui/jquery-ui-1.8.16.custom.css">
 
 <!--[if lt IE 9]>
-<link rel="stylesheet" href="css/ie8.css">
+<link rel="stylesheet" href="_style/ie8.css">
 <script>
 document.createElement('header');
 document.createElement('nav');
@@ -33,20 +33,20 @@ document.createElement('hgroup');
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 
-<script src="js/main.js"></script>
+<script src="_script/main.js"></script>
 </head>
 <body>
 
 	<div id="container">
-		<img id="logo" src="images/logo.png" />
+		<img id="logo" src="_img/logo.png" />
 		<header> </header>
 		<div id="main" role="main">
 			<!-- 
 		<div class="hoverCircle">
-			<img class="circleCenter" src="images/weather_sun.png"/>
-			<img class="circleIcon" src="images/weather_sun.png"/>
-			<img class="circleIcon" src="images/weather_sun.png"/>
-			<img class="circleIcon" src="images/weather_sun.png"/>
+			<img class="circleCenter" src="_img/weather_sun.png"/>
+			<img class="circleIcon" src="_img/weather_sun.png"/>
+			<img class="circleIcon" src="_img/weather_sun.png"/>
+			<img class="circleIcon" src="_img/weather_sun.png"/>
 		</div>
  -->
 			<nav id="menu">
@@ -56,7 +56,7 @@ document.createElement('hgroup');
 						<h2>Good work, by the way.</h2>
 					</section>
 					<section class="addworkout">
-						<img class="icon" src="images/icon_run.png" />
+						<img class="icon" src="_img/icon_run.png" />
 						<h1>Run 01</h1>
 						<input id="workoutname" type="text" value="Name my run">
 						<section class="datelocation">
@@ -67,7 +67,7 @@ document.createElement('hgroup');
 					</section>
 				</section>
 				<ul>
-					<li class="icon"><img src="images/icon_run.png">
+					<li class="icon"><img src="_img/icon_run.png">
 						<p>Run</p>
 						<ul>
 							<li>Outdoor Run</li>
@@ -75,7 +75,7 @@ document.createElement('hgroup');
 							<li>Track</li>
 						</ul>
 					</li>
-					<li class="icon"><img src="images/icon_swim.png">
+					<li class="icon"><img src="_img/icon_swim.png">
 						<p>Swim</p>
 						<ul>
 							<li>Pool</li>
@@ -83,7 +83,7 @@ document.createElement('hgroup');
 							<li>Open Water Wetsuit</li>
 						</ul>
 					</li>
-					<li class="icon"><img src="images/icon_bike.png">
+					<li class="icon"><img src="_img/icon_bike.png">
 						<p>Bike</p>
 						<ul>
 							<li>Road Bike</li>
@@ -91,28 +91,28 @@ document.createElement('hgroup');
 							<li>Spin</li>
 						</ul>
 					</li>
-					<li class="icon"><img src="images/icon_walk.png">
+					<li class="icon"><img src="_img/icon_walk.png">
 						<p>Walk</p>
 						<ul>
 							<li>Walk</li>
 							<li>Hike</li>
 						</ul>
 					</li>
-					<li class="icon"><img src="images/icon_cardio.png">
+					<li class="icon"><img src="_img/icon_cardio.png">
 						<p>Cardio</p>
 						<ul>
 							<li>Elliptical</li>
 							<li>Other</li>
 						</ul>
 					</li>
-					<li class="icon"><img src="images/icon_strength.png">
+					<li class="icon"><img src="_img/icon_strength.png">
 						<p>Strength</p>
 						<ul>
 							<li>Weights</li>
 							<li>Other</li>
 						</ul>
 					</li>
-					<li class="icon"><img src="images/icon_stretch.png">
+					<li class="icon"><img src="_img/icon_stretch.png">
 						<p>Stretch</p>
 						<ul>
 							<li>Yoga</li>
@@ -129,7 +129,7 @@ document.createElement('hgroup');
 								<input type="text" value="0" />
 							</p>
 							<p>
-								<img src="images/icon_distance_inactive.png" />mi
+								<img src="_img/icon_distance_inactive.png" />mi
 							</p>
 						</div>
 						<div class="datafield large editable">
@@ -137,26 +137,26 @@ document.createElement('hgroup');
 								<input type="text" value="0:00:00" />
 							</p>
 							<p>
-								<img src="images/icon_time_inactive.png" />min
+								<img src="_img/icon_time_inactive.png" />min
 							</p>
 						</div>
 						<div class="datafield large uneditable">
 							<p>0:00</p>
 							<p>
-								<img src="images/icon_milepace_inactive.png" />min/mi
+								<img src="_img/icon_milepace_inactive.png" />min/mi
 							</p>
 						</div>
 						<div class="datafield small uneditable">
 							<p>0:00</p>
 							<div id="editweight_wr"><p>Edit weight</p><input size=3></div>
 							<p>
-								<img src="images/icon_cal_inactive.png" />cal
+								<img src="_img/icon_cal_inactive.png" />cal
 							</p>
 						</div>
 						<div class="datafield small uneditable">
 							<p>0:00</p>
 							<p>
-								<img src="images/icon_hrm_inactive.png" />HPM
+								<img src="_img/icon_hrm_inactive.png" />HPM
 							</p>
 						</div>
 					</section>
@@ -164,18 +164,18 @@ document.createElement('hgroup');
 						<h2>My run was</h2>
 						<textarea placeholder="Tell us about your workout!"></textarea>
 						<div id="addMoodBtn" class="button">
-							<img src="images/icon_ok_white.png" />Add
+							<img src="_img/icon_ok_white.png" />Add
 						</div>
 						<div id="addMood" class="hoverCircle">
-							<img class="circleIcon" title="Excellent" src="images/icon_excellent_white.png" />
-							<img class="circleIcon" title="Good" src="images/icon_good_white.png" /> <img
-								class="circleIcon" title="OK" src="images/icon_ok_white.png" /> <img
-								class="circleIcon" title="Bad" src="images/icon_bad_white.png" /> <img
-								class="circleIcon" title="Worst" src="images/icon_worst_white.png" />
+							<img class="circleIcon" title="Excellent" src="_img/icon_excellent_white.png" />
+							<img class="circleIcon" title="Good" src="_img/icon_good_white.png" /> <img
+								class="circleIcon" title="OK" src="_img/icon_ok_white.png" /> <img
+								class="circleIcon" title="Bad" src="_img/icon_bad_white.png" /> <img
+								class="circleIcon" title="Worst" src="_img/icon_worst_white.png" />
 						</div>
 						<div id="share">
-							Share this workout <img src="images/icon_facebook.png" /><input type="checkbox"/><img
-								src="images/icon_twitter.png" /><input type="checkbox"/>
+							Share this workout <img src="_img/icon_facebook.png" /><input type="checkbox"/><img
+								src="_img/icon_twitter.png" /><input type="checkbox"/>
 						</div>
 					</section>
 				</section>
@@ -184,33 +184,33 @@ document.createElement('hgroup');
 					<section id="addmoredata">
 						<section class="top">
 							<section class="left">
-								<h1 style="background-image: url(images/icon_routes_small.png);">My
+								<h1 style="background-image: url(_img/icon_routes_small.png);">My
 									Routes</h1>
 								<div class="button" id="addRouteBtn">
 									<p>Add Route</p>
 								</div>
 							</section>
 							<section class="right">
-								<h1 style="background-image: url(images/icon_message.png);">Workout
+								<h1 style="background-image: url(_img/icon_message.png);">Workout
 									Details</h1>
 								<textarea placeholder="Details such as sets and reps." id="workoutDetails"></textarea>
 								<p id="workoutPrivate"><input type="checkbox" id="private"><label for="private">Keep my workout details private</label></p>
 								<h1
-									style="background-image: url(images/icon_weather_small.png);">Weather</h1>
+									style="background-image: url(_img/icon_weather_small.png);">Weather</h1>
 								<div id="addWeatherBtn" class="button">
-									<img src="images/icon_sunny_white.png" />Add
+									<img src="_img/icon_sunny_white.png" />Add
 								</div>
 								<div id="addWeather" class="hoverCircle">
-									<img class="circleIcon" title="Sunny" src="images/icon_sunny_white.png" /> <img
-										class="circleIcon" title="Partly Cloudy" src="images/icon_partlycloudy_white.png" />
-									<img class="circleIcon" title="Cloudy" src="images/icon_cloudy_white.png" />
-									<img class="circleIcon" title="Rain" src="images/icon_rain_white.png" /> <img
-										class="circleIcon" title="Snow" src="images/icon_snow_white.png" /> <img
-										class="circleIcon" title="Thunderstorms" src="images/icon_tstorms_white.png" /><img
-										class="circleIcon" title="Wind" src="images/icon_wind_white.png" /><img
-										class="circleIcon" title="Tornado" src="images/icon_tornado_white.png" /><img
-										class="circleIcon" title="Ice" src="images/icon_ice_white.png" /><img
-										class="circleIcon" title="Clear Night" src="images/icon_clearnight_white.png" />
+									<img class="circleIcon" title="Sunny" src="_img/icon_sunny_white.png" /> <img
+										class="circleIcon" title="Partly Cloudy" src="_img/icon_partlycloudy_white.png" />
+									<img class="circleIcon" title="Cloudy" src="_img/icon_cloudy_white.png" />
+									<img class="circleIcon" title="Rain" src="_img/icon_rain_white.png" /> <img
+										class="circleIcon" title="Snow" src="_img/icon_snow_white.png" /> <img
+										class="circleIcon" title="Thunderstorms" src="_img/icon_tstorms_white.png" /><img
+										class="circleIcon" title="Wind" src="_img/icon_wind_white.png" /><img
+										class="circleIcon" title="Tornado" src="_img/icon_tornado_white.png" /><img
+										class="circleIcon" title="Ice" src="_img/icon_ice_white.png" /><img
+										class="circleIcon" title="Clear Night" src="_img/icon_clearnight_white.png" />
 								</div>
 								<div id="weatherDetails">
 									<p id="temperature_wr">
@@ -227,13 +227,13 @@ document.createElement('hgroup');
 						</section>
 						<section class="bottom">
 							<section class="left">
-								<h1 style="background-image: url(images/icon_photo_small.png);">Photos</h1>
+								<h1 style="background-image: url(_img/icon_photo_small.png);">Photos</h1>
 								<div class="button" id="addPhotoBtn">
 									<p>Add Photo</p>
 								</div>
 							</section>
 							<section class="right">
-								<h1 style="background-image: url(images/icon_video_small.png);">Videos</h1>
+								<h1 style="background-image: url(_img/icon_video_small.png);">Videos</h1>
 								<div class="button" id="addVideoBtn">
 									<p>Add Video</p>
 								</div>
@@ -243,7 +243,7 @@ document.createElement('hgroup');
 					</section>
 				</section>
 				<footer class="addbg">
-									<a href="#" onclick="reset();" style="">Cancel</a> <a href="#"
+									<a href="#" onClick="reset();" style="">Cancel</a> <a href="#"
 						onclick="reset();" style="">Submit</a>
 				</footer>
 				<section class="modal" id="addRouteModal">
@@ -251,7 +251,7 @@ document.createElement('hgroup');
 				</section>
 				<section class="modal" id="addPhotoModal">
 					<h1>Upload a photo</h1>
-					<img src="images/photoplaceholder.png" />
+					<img src="_img/photoplaceholder.png" />
 				</section>
 				<section class="modal" id="addVideoModal">
 					<h1>Upload a video</h1>
