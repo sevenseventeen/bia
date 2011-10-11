@@ -102,3 +102,5 @@
 	*/
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);zoom:1;
 }
+
+section>.individual{float:none;width:720px;margin:0 auto;height:auto;border:none;padding:0 0 19px;}
