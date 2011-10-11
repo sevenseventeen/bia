@@ -2760,6 +2760,12 @@ h1.banner>.subright {
 	position: absolute;
 	right: 20px;
 }
+
+h2.banner>.subright {
+	top: 20px;
+	position: absolute;
+	right: 10px;
+}
 .witharrow { 
 /*adds white arrow to the right */
 	background: url(../_img/button_white_xparent_right.png) no-repeat 6px;
