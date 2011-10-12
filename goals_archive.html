@@ -1,0 +1,133 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>My Goals (landing page)</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="_style/normalize.css">
+<link rel="stylesheet" href="_style/main.css">
+<link rel="stylesheet" href="_style/jqueryui/jquery-ui-1.8.16.custom.css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="_style/ie8.css">
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script src="_script/main.js"></script>
+
+</head>
+<body>
+
+	<div id="container" class="home">
+	<header>
+			<section id="accountNav">
+				<img src="_img/profilephoto.png" /><a href="#">logout</a> <a
+					href="#">settings</a><span>hello, <b>lorem</b> </span>
+			</section>
+
+			<nav id="mainNav">
+				<div id="logo"></div>
+				<section title="home">
+					<span><a href="#home">home</a> </span>
+		    </section>
+				<section title="profile">
+					<span><a href="#profile">profile</a> </span>
+		    </section>
+				<section title="train" class="active">
+					<span><a href="#train">train</a> </span>
+					<ul>
+				    <li><a href="#calendar">Calendar</a></li>
+						<li>Goals</li>
+					</ul>
+				</section>
+				<section title="connect">
+					<span><a href="#connect">connect</a> </span>
+					<ul>
+				    <li>People</li>
+						<li>Challenges</li>
+						<li>Groups</li>
+						<li>Races &amp; Events</li>
+					</ul>
+				</section>
+				<section title="add">
+					<span><a href="#add">add</a> </span>
+					<ul>
+				    <li>Workout</li>
+						<li>Race Results</li>
+						<li>Food</li>
+					</ul>
+				</section>
+				
+			</nav>
+		</header>
+		<footer> </footer>
+		<div id="main" role="main">
+
+			
+			<header class="menu" >
+						<div>
+						<h1>Goals</h1>
+                    	<p>&#160;</p>
+                    </div>
+                    <div class="buttonright goalsarchivenav"><a href="#">Active</a>&#160;|&#160;<a href="#" class="selected">Archived</a> </div>
+				</header>
+			<section>
+				<section id="maindetails" class="maindetails goalsarchive clearfix">
+						<table border="0" id="archivetable" summary="Table of Archived Goals">
+                        	<tbody>
+                                <tr>
+                                    <td class="goalDistance"><span>Distance</span></td>
+                                    <td class="goal">Run 500 Miles</td>
+                                    <td class="goalDate">00/00/0000 &#8211; 00/00/0000</td>
+                                    <td class="goalResults"><strong>Achieved!</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="goalRace"><span>Race</span></td>
+                                    <td class="goal">Swim 600 Miles</td>
+                                    <td class="goalDate">07/31/2011 &#8211; 08/23/2011</td>
+                                    <td class="goalResults"><div class="meter"><span style="width: 63%;" class="end"></span></div></td>
+                                </tr>
+                                <tr>
+                                    <td class="goalWeight"><span>Weight</span></td>
+                                    <td class="goal">Get into my skinny jeans</td>
+                                    <td class="goalDate">07/31/2011 &#8211; 08/23/2011</td>
+                                    <td class="goalResults"><strong>Achieved!</strong></td>
+                                </tr>
+                                <tr>
+                                    <td class="goalWorkout"><span>Workout</span></td>
+                                    <td class="goal">Run the Boston Marathon</td>
+                                    <td class="goalDate">07/31/2011 &#8211; 08/23/2011</td>
+                                    <td class="goalResults"><div class="meter"><span style="width: 63%;" class="end"></span></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+						
+				</section>
+			</section>
+			<footer class="trainbg">								
+				</footer>
+		</div>
+	</div>
+	<!--! end of #container -->
+	</body>
+</html>
