@@ -2824,6 +2824,19 @@ section>.individual>div.datalegend{display:block;float:right;width:165px;text-al
 #goalsSummary .activity .comment .avatar{float:left;width:49px;height:50px;}
 #goalsSummary .activity .comment input{width:352px;height:25px;}
 
+.goalsarchive{min-height: 500px;height:auto !important;height: 500px;}
+.goalsarchivenav{color:#bfbfbf;top:30px;right:30px;}
+.goalsarchivenav a{color:#bfbfbf;text-decoration:none;}
+.goalsarchivenav a.selected{color:#fed02a;}
+#archivetable>tbody>tr>td:first-of-type{text-indent:-9999em;}
+#archivetable>tbody>tr>td{padding:0 15px 0 25px;height:45px;text-align:center;}
+#archivetable .goalDistance span,#archivetable .goalRace span,#archivetable .goalWeight span,#archivetable .goalWorkout span{display:block;width:45px;height:25px;background:transparent url(../_img/icons_content.png) no-repeat -3px -1px;}
+#archivetable .goalDistance span{background-position:0 -121px;}
+#archivetable .goalRace span{background-position:0 -246px;}
+#archivetable .goalWorkout span{background-position:0 -371px;}
+#archivetable .goal{text-align:left;font-weight:bold;padding:0 25px 0 0;}
+#archivetable .goalDate{color:#666;font-size:14px;text-align:left;padding-right:25px;}
+#archivetable .meter{margin:-3px 0 0;}
 
 #main>footer {
 width: 794px;
