@@ -123,37 +123,70 @@ document.createElement('hgroup');
 						<span>Other people with similar goals</span>									
 						</h1>
 						<section class="scrollcontainer" >
-								<span id="scrollbuttonleft"></span>
-								<div id="scrollbox">
-										<div class="scrollitem">
+								
+								<div class="scrollbox">
+                                	<ul>
+										<li class="scrollitem">
 												<img src="_img/profilephotos/scroller78_1.jpg">
 												<h3>Holly S.</h3>
 												<p>Mill Valley, CA</p>
-										</div>
-										<div class="scrollitem">
+										</li>
+										<li class="scrollitem">
 												<img src="_img/profilephotos/scroller78_2.jpg">
 												<h3>Holly S.</h3>
 												<p>San Luis Obisbo, CA</p>
-										</div>
-										<div class="scrollitem">
+										</li>
+										<li class="scrollitem">
 												<img src="_img/profilephotos/scroller78_3.jpg">
 												<h3>Holly S.</h3>
 												<p>Washington, DC</p>
-										</div>
-										<div class="scrollitem">
+										</li>
+										<li class="scrollitem">
 												<img src="_img/profilephotos/scroller78_4.jpg">
 												<h3>Holly S.</h3>
 												<p>New York, NY</p>
-										</div>
-										<div class="scrollitem">
+										</li>
+										<li class="scrollitem">
 												<img src="_img/profilephotos/scroller78_5.jpg">
 												<h3>Holly S.</h3>
 												<p>Santa Monica, CA</p>
-										</div>
+										</li>
+                                        <li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_1.jpg">
+												<h3>Holly S.</h3>
+												<p>Mill Valley, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_2.jpg">
+												<h3>Holly S.</h3>
+												<p>San Luis Obisbo, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_3.jpg">
+												<h3>Holly S.</h3>
+												<p>Washington, DC</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_4.jpg">
+												<h3>Holly S.</h3>
+												<p>New York, NY</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_5.jpg">
+												<h3>Holly S.</h3>
+												<p>Santa Monica, CA</p>
+										</li>
+                                    </ul>
 								</div>
-								<span id="scrollbuttonright"></span>
+								
 						</section>
-						
+						<script src="_script/jquery.carousel.min.js" type="text/javascript"></script>
+                        <script>
+							$(function(){
+								$("div.scrollbox").carousel({ dispItems: 5, btnsPosition: 'outside', prevBtn: '<span class="scrollbuttonleft"></span>', nextBtn: '<span class="scrollbuttonright"></span>',loop: true });
+    });
+
+						</script>
 				</section>
 			</section>
 			<footer class="trainbg">								

@@ -2432,7 +2432,7 @@ padding-left: 30px;
 	color: #666;
 	text-shadow: 1px 1px 1px #ffffff; 
 }
-}
+
 /* these are the individual buttons for both .split5 and .split8  */
 .run {
 	/* uses predefined background-image */
@@ -2849,10 +2849,7 @@ border-bottom-right-radius: 10px;
 }
 
 /* Scrollbox used on goals landing page */
-.scrollcontainer {
-	
-
-}
+.scrollcontainer {margin:20px 0;}
 
 .scrollbox {
 	/*innerbox that contains the scroller */
@@ -2874,7 +2871,7 @@ border-bottom-right-radius: 10px;
 	top: 75px;
 	left:25px;
 	display: inline-block;
-	background:transparent url(../_img/icons_content.png) no-repeat -3px -975px;
+	background:transparent url(../_img/icons_content.png) no-repeat -3px -724px;
 	cursor: pointer;
 }
 .scrollbuttonright {
@@ -2884,7 +2881,7 @@ border-bottom-right-radius: 10px;
 		top: 75px;
 		right:25px;
 		display: inline-block;
-		background:transparent url(../_img/icons_content.png) no-repeat -3px -1101px;
+		background:transparent url(../_img/icons_content.png) no-repeat -3px -850px;
 		cursor: pointer;
 }
 
@@ -3094,12 +3091,15 @@ form>div>.deviceLoginUser label,form>div>.deviceLoginPwd label{float:right;margi
 form>div>.deviceEnable input[type="checkbox"]{margin-right:8px;}
 
 .people h2{color:#e6a52a;font-size:24px;margin-left:77px;}
-.people .scrollcontainer{padding-top:0;}
 .people .recentgoals h2,.people .recentworkouts h2{float:left;}
 .people .recentgoals div,.people .recentworkouts div{float:right;top:5px;right:35px;}
+.people .scrollcontainer{margin-top:9px;}
+.people .scrollbuttonleft{background-position: -3px -975px;}
+.people .scrollbuttonright{background-position: -3px -1101px;}
 #workoutfilter,#goalfilter{width:150px;}
 #workoutfilter_chzn a.chzn-single span,#goalfilter_chzn a.chzn-single span,div.chzn-drop ul.chzn-results li{text-align:center;color:#fff;font-weight:bold;}
-.people .chzn-container-single .chzn-single div b{background:transparent url(../_img/icons_content.png) no-repeat -12px -1220px;}
+.people .chzn-container-single .chzn-single div{padding: 0 8px;}
+.people .chzn-container-single .chzn-single div b{background:transparent url(../_img/icons_content.png) no-repeat -12px -1218px;}
 .people .chzn-container-single .chzn-single  {
 background-color: #FEDE37;
 background-image: -webkit-linear-gradient(#da9d28, #e6a52a);
