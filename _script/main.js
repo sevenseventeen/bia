@@ -372,6 +372,10 @@ $("#distance_unit_menu li").bind("click", function(e) {
 		openModal($("#addVideoModal"));
 	});
 
+	$("#goalfilter").chosen();
+	$("#workoutfilter").chosen();
+	$(".chzn-container-single").addClass("chzn-container-single-nosearch");
+
 	// For design/testing
 /* 	 if (location.hostname == "localhost") {
 		$("#menu").addClass("addworkout");

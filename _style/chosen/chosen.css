@@ -366,3 +366,6 @@
   padding: 4px 5px 4px 20px;
 }
 /* @end */
+
+/* overrides */
+.chzn-container .chzn-results{padding:0;margin:0;overflow-x:visible;overflow-y:visible;}

@@ -1,0 +1,257 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>My Goals (landing page)</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="_style/normalize.css">
+<link rel="stylesheet" href="_style/main.css">
+<link rel="stylesheet" href="_style/jqueryui/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" href="_style/chosen/chosen.css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="_style/ie8.css">
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script src="_script/main.js"></script>
+ <script src="_script/chosen/chosen.jquery.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div id="container" class="home">
+	<header>
+			<section id="accountNav">
+				<img src="_img/profilephoto.png" /><a href="#">logout</a> <a
+					href="#">settings</a><span>hello, <b>lorem</b> </span>
+			</section>
+
+			<nav id="mainNav">
+				<div id="logo"></div>
+				<section title="home">
+					<span><a href="#home">home</a> </span>
+		    </section>
+				<section title="profile">
+					<span><a href="#profile">profile</a> </span>
+		    </section>
+				<section title="train" class="active">
+					<span><a href="#train">train</a> </span>
+					<ul>
+				    <li><a href="#calendar">Calendar</a></li>
+						<li>Goals</li>
+					</ul>
+				</section>
+				<section title="connect">
+					<span><a href="#connect">connect</a> </span>
+					<ul>
+				    <li>People</li>
+						<li>Challenges</li>
+						<li>Groups</li>
+						<li>Races &amp; Events</li>
+					</ul>
+				</section>
+				<section title="add">
+					<span><a href="#add">add</a> </span>
+					<ul>
+				    <li>Workout</li>
+						<li>Race Results</li>
+						<li>Food</li>
+					</ul>
+				</section>
+				
+			</nav>
+		</header>
+		<footer> </footer>
+		<div id="main" role="main">
+
+			
+			<header class="menu" >
+						<div>
+						<h1>People</h1>
+                    	<p>&#160;</p>
+                    </div>
+				</header>
+			<section>
+				<section id="maindetails" class="maindetails people clearfix">
+						<header class="recentworkouts clearfix">
+                        	<h2>Recent Workouts:</h2>
+                            <div>
+                            <form >
+                                <select id="workoutfilter">
+                                    <option selected>Goal Type</option>
+                                    <option>Distance</option>
+                                    <option>Workout</option>
+                                    <option>Race</option>
+                                    <option>Weight</option>
+                                </select>	
+                            </form>
+                            </div>		
+                        </header>
+                        <section class="scrollcontainer" >
+								<div class="scrollbox scrollbox1">
+									<ul>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_1.jpg">
+												<h3>Holly S.</h3>
+												<p>Mill Valley, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_2.jpg">
+												<h3>Holly S.</h3>
+												<p>San Luis Obisbo, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_3.jpg">
+												<h3>Holly S.</h3>
+												<p>Washington, DC</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_4.jpg">
+												<h3>Holly S.</h3>
+												<p>New York, NY</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_5.jpg">
+												<h3>Holly S.</h3>
+												<p>Santa Monica, CA</p>
+										</li>
+                                        <li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_1.jpg">
+												<h3>Holly S.</h3>
+												<p>Mill Valley, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_2.jpg">
+												<h3>Holly S.</h3>
+												<p>San Luis Obisbo, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_3.jpg">
+												<h3>Holly S.</h3>
+												<p>Washington, DC</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_4.jpg">
+												<h3>Holly S.</h3>
+												<p>New York, NY</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_5.jpg">
+												<h3>Holly S.</h3>
+												<p>Santa Monica, CA</p>
+										</li>
+                                    </ul>
+								</div>
+						</section>
+						
+                        <header class="recentgoals clearfix">
+                        	<h2>Recent Goals:</h2>
+                            <div>
+                                <select id="goalfilter">
+                                    <option selected>Goal Type</option>
+                                    <option>Distance</option>
+                                    <option>Workout</option>
+                                    <option>Race</option>
+                                    <option>Weight</option>
+                                </select>	
+                            </div>		
+                        </header>
+                        <section class="scrollcontainer" >
+								
+								<div class="scrollbox scrollbox2">
+                                	<ul>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_1.jpg">
+												<h3>Holly S.</h3>
+												<p>Mill Valley, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_2.jpg">
+												<h3>Holly S.</h3>
+												<p>San Luis Obisbo, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_3.jpg">
+												<h3>Holly S.</h3>
+												<p>Washington, DC</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_4.jpg">
+												<h3>Holly S.</h3>
+												<p>New York, NY</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_5.jpg">
+												<h3>Holly S.</h3>
+												<p>Santa Monica, CA</p>
+										</li>
+                                        <li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_1.jpg">
+												<h3>Holly S.</h3>
+												<p>Mill Valley, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_2.jpg">
+												<h3>Holly S.</h3>
+												<p>San Luis Obisbo, CA</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_3.jpg">
+												<h3>Holly S.</h3>
+												<p>Washington, DC</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_4.jpg">
+												<h3>Holly S.</h3>
+												<p>New York, NY</p>
+										</li>
+										<li class="scrollitem">
+												<img src="_img/profilephotos/scroller78_5.jpg">
+												<h3>Holly S.</h3>
+												<p>Santa Monica, CA</p>
+										</li>
+                                    </ul>
+								</div>
+								
+						</section>
+                        
+                     	<script src="http://www.thomaslanciaux.pro/js/jquery.carousel.min.js" type="text/javascript"></script>
+                        <script>
+							$(function(){
+								$("div.scrollbox1").carousel({ dispItems: 5, btnsPosition: 'outside', prevBtn: '<span class="scrollbuttonleft"></span>', nextBtn: '<span class="scrollbuttonright"></span>',loop: true });
+
+        						$("div.scrollbox2").carousel({ dispItems: 5, btnsPosition: 'outside', prevBtn: '<span class="scrollbuttonleft"></span>', nextBtn: '<span class="scrollbuttonright"></span>',loop: true });
+    });
+
+						</script>
+                       
+				</section>
+			</section>
+			<footer class="trainbg">								
+				</footer>
+		</div>
+	</div>
+	<!--! end of #container -->
+	</body>
+</html>

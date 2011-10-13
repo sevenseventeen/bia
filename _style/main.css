@@ -2849,52 +2849,54 @@ border-bottom-right-radius: 10px;
 }
 
 /* Scrollbox used on goals landing page */
-#scrollcontainer {
-	position:  relative;
-	height:  150px;
-	/* outer box */
-		
-	padding: 20px;
+.scrollcontainer {
+	
+
 }
-#scrollbox {
+
+.scrollbox {
 	/*innerbox that contains the scroller */
-	position: absolute;
-	width:  630px;
-	height:  145px;
-	-webkit-box-shadow: inset 0px 0px 5px #444;
-	-moz-box-shadow: inset 0px 0px 5px #444;
-	box-shadow: inset 0px 0px 5px #444;
+	position: relative;
+	width:  580px;
+	-webkit-box-shadow: inset 5px 0 5px -5px #444,inset -5px 0 5px -5px #444;
+	-moz-box-shadow: inset 5px 0 5px -5px #444,inset -5px 0 5px -5px #444;
+	box-shadow: inset 5px 0 5px -5px #444,inset -5px 0 5px -5px #444;
 	left: 78px;
+	overflow:hidden;
+	border:1px solid #ccc;
+	padding:25px;
 }
-#scrollbuttonleft {
+.scrollbox ul{padding:0;}
+.scrollbuttonleft {
 	width:  30px;
 	height:  30px;	
 	position: absolute;
 	top: 75px;
 	left:25px;
 	display: inline-block;
-	background-image: url(../_img/button_scroll_left.png);
+	background:transparent url(../_img/icons_content.png) no-repeat -3px -975px;
+	cursor: pointer;
 }
-#scrollbuttonright {
+.scrollbuttonright {
 		width:  30px;
 		height:  30px;	
 		position: absolute;
 		top: 75px;
 		right:25px;
 		display: inline-block;
-		background-image: url(../_img/button_scroll_right.png);
+		background:transparent url(../_img/icons_content.png) no-repeat -3px -1101px;
 		cursor: pointer;
 }
 
 .scrollitem {
 	/* individual scrolling items */
-	height:  128px;
-	width:  96px;
-	margin: 18px 10px 0 20px;
+	margin: 0 50px 0 0;
+	height:128px;
 	float: left;
 	overflow: hidden;
 	cursor: pointer;
 }
+
 .scrollitem>h3 {
 	margin: 0;
 	font-size: 14px;
@@ -2904,6 +2906,7 @@ border-bottom-right-radius: 10px;
 	font-size: 11px;
 	line-height: 13px;
 	margin: 3px 0 0;
+	width:78px;
 }
 
 /* Profile & Settings Added by P. Jordan 10.1 - 10.3.11 */
@@ -3089,3 +3092,37 @@ form>div>.deviceInfo p{margin-top:0;margin-right:15px;}
 form>div>.deviceLoginUser input,form>div>.deviceLoginPwd input{width:370px;}
 form>div>.deviceLoginUser label,form>div>.deviceLoginPwd label{float:right;margin-right:15px;}
 form>div>.deviceEnable input[type="checkbox"]{margin-right:8px;}
+
+.people h2{color:#e6a52a;font-size:24px;margin-left:77px;}
+.people .scrollcontainer{padding-top:0;}
+.people .recentgoals h2,.people .recentworkouts h2{float:left;}
+.people .recentgoals div,.people .recentworkouts div{float:right;top:5px;right:35px;}
+#workoutfilter,#goalfilter{width:150px;}
+#workoutfilter_chzn a.chzn-single span,#goalfilter_chzn a.chzn-single span,div.chzn-drop ul.chzn-results li{text-align:center;color:#fff;font-weight:bold;}
+.people .chzn-container-single .chzn-single div b{background:transparent url(../_img/icons_content.png) no-repeat -12px -1220px;}
+.people .chzn-container-single .chzn-single  {
+background-color: #FEDE37;
+background-image: -webkit-linear-gradient(#da9d28, #e6a52a);
+background-image: -moz-linear-gradient(#da9d28, #e6a52a);
+background-image: -o-linear-gradient(#da9d28, #e6a52a);
+background-image: -ms-linear-gradient(#da9d28, #e6a52a);
+
+border-top: 1px solid #e3be78;
+border-left: 1px solid #e8ba4f;
+border-right: 1px solid #e8ba4f;
+border-bottom: 1px solid #e6bc2c;
+padding: 2px;
+-webkit-box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35),-1px 2px 1px rgba(221,221,221,0.9);
+-moz-box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35),-1px 2px 1px rgba(221,221,221,0.9);
+box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35),-1px 2px 1px rgba(221,221,221,0.9);
+}
+.people .chzn-container-single .chzn-single div,div.chzn-drop ul.chzn-results li{background-image: -webkit-linear-gradient(#da9d28, #e6a52a);
+background-image: -moz-linear-gradient(#da9d28, #e6a52a);
+background-image: -o-linear-gradient(#da9d28, #e6a52a);
+background-image: -ms-linear-gradient(#da9d28, #e6a52a);
+-webkit-box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35);
+-moz-box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35);
+box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35);}
+.people .chzn-container-active .chzn-single-with-drop div{border-left: 1px solid #aaa;}
+div.chzn-drop ul.chzn-results li{text-align:right;border-top: 1px solid #ad7b1f;}
+.people .chzn-container .chzn-results .highlighted{background:#759ED1;}
