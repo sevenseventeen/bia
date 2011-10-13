@@ -18,7 +18,7 @@
 	}
 
 #menu,.menu,#maindetails {
-	filter:progid:DXImageTransform.Microsoft.Shadow(Strength=5, Direction=135, Color='#666666');zoom:1;
+	filter:progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#666666');zoom:1;
 	border-top:1px solid #ccc;border-left:1px solid #ccc;
 }
 #menu>ul>li.icon>ul {
@@ -39,6 +39,8 @@
 	display: block;
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
 }
+
+#main>footer,#loginpane>footer, #goalset>footer, .settingspane>footer{width:802px;}
 
 #workoutdata>.left>.datafield {
 	background-color: #efefef;
@@ -104,3 +106,7 @@
 }
 
 section>.individual{float:none;width:720px;margin:0 auto;height:auto;border:none;padding:0 0 19px;}
+
+.people .chzn-container-single .chzn-single div{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffda9d28,endColorstr=#ffe6a52a);zoom:1;}
+.people .chzn-container-single .chzn-single,div.chzn-drop ul.chzn-results li{background:#e6a52a;filter:none;}
+.people .chzn-container-single .chzn-search{display:none;}
