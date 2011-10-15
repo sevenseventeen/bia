@@ -3097,7 +3097,7 @@ form>div>.deviceEnable input[type="checkbox"]{margin-right:8px;}
 .people .scrollbuttonleft{background-position: -3px -975px;}
 .people .scrollbuttonright{background-position: -3px -1101px;}
 #workoutfilter,#goalfilter{width:150px;}
-#workoutfilter_chzn a.chzn-single span,#goalfilter_chzn a.chzn-single span,div.chzn-drop ul.chzn-results li{text-align:center;color:#fff;font-weight:bold;}
+#workoutfilter_chzn a.chzn-single span,#goalfilter_chzn a.chzn-single span,.people div.chzn-drop ul.chzn-results li{text-align:center;color:#fff;font-weight:bold;}
 .people .chzn-container-single .chzn-single div{padding: 0 8px;}
 .people .chzn-container-single .chzn-single div b{background:transparent url(../_img/icons_content.png) no-repeat -12px -1218px;}
 .people .chzn-container-single .chzn-single  {
@@ -3113,12 +3113,12 @@ padding: 2px;
 -moz-box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35),-1px 2px 1px rgba(221,221,221,0.9);
 box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35),-1px 2px 1px rgba(221,221,221,0.9);
 }
-.people .chzn-container-single .chzn-single div,div.chzn-drop ul.chzn-results li{background-image: -webkit-linear-gradient(#da9d28, #e6a52a);
+.people .chzn-container-single .chzn-single div,.people div.chzn-drop ul.chzn-results li{background-image: -webkit-linear-gradient(#da9d28, #e6a52a);
 background-image: -moz-linear-gradient(#da9d28, #e6a52a);
 background-image: -o-linear-gradient(#da9d28, #e6a52a);
 -webkit-box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35);
 -moz-box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35);
 box-shadow:inset 1px 1px 1px 1px rgba(255,255,255,0.35);}
 .people .chzn-container-active .chzn-single-with-drop div{border-left: 1px solid #aaa;}
-div.chzn-drop ul.chzn-results li{text-align:right;border-top: 1px solid #ad7b1f;}
+.people div.chzn-drop ul.chzn-results li{text-align:right;border-top: 1px solid #ad7b1f;}
 .people .chzn-container .chzn-results .highlighted{background:#759ED1;}

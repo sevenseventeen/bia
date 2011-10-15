@@ -1,0 +1,241 @@
+#menu.open {
+	height: 140px;
+}
+
+.calendar #menu {
+	overflow: visible;
+}
+
+.calendar #menu>h2 {
+	font-size: 18px;
+	left: 40px;
+	top: 20px;
+	position: relative;
+	margin: 0px;
+	position: relative;
+}
+
+.calendar #menu>.datepicker {
+	font-size: 24px;
+	left: 40px;
+	top: -5px;
+	float: left;
+}
+
+.calendar #menu>.datepicker:before,.calendar #menu>.datepicker:after {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 30px;
+	top: 33px;
+}
+
+.calendar #menu>.datepicker:before {
+	background-image: url(../_img/icon_arrow_left_yellow.png);
+	left: -30px;
+}
+
+.calendar #menu>.datepicker:after {
+	background-image: url(../_img/icon_arrow_right_yellow.png);
+	right: -30px;
+}
+
+.calendar #menu>.datepicker>h1{margin:29px 0;font-size:36px;line-height:1.139em;}
+
+.calendar #menu>.viewpicker {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 12px;
+}
+
+.calendar #menu>.viewpicker>div {
+	float: left;
+	top: 6px;
+	margin-right: 12px;
+	color: #666;
+	font-weight: bold;
+}
+
+.calendar #menu>.viewpicker>ul {
+	float: left;
+	background-color: #ededed;
+	background-image: -webkit-linear-gradient(#d6d6d6, #ededed);
+	background-image: -moz-linear-gradient(#d6d6d6, #ededed);
+	box-shadow: inset 0px 1px 0px #b6b6b6;
+	border-radius: 5px;
+	padding: 3px;
+	border-radius: 5px;
+	border-left: 1px solid #d6d6d6;
+	border-right: 1px solid #d6d6d6;
+}
+
+.calendar #menu>.viewpicker>ul>li {
+	float: left;
+	background-color: transparent;
+	border-radius: 5px;
+	padding: 3px 11px 3px 11px;
+	border:1px transparent;
+	font-weight: bold;
+	color: #666;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, .7);
+	padding: 4px 11px 3px 11px;
+}
+
+.calendar #menu>.viewpicker>ul>li.selected {
+	background-color: #fede37;
+	background-image: -webkit-linear-gradient(#fede37, fecd27);
+	background-image: -moz-linear-gradient(#fede37, fecd27);
+	border-top: 1px solid #ebc127;
+	border-left: 1px solid #d1ac22;
+	border-right: 1px solid #d1ac22;
+	border-bottom: 1px solid #b3931c;
+	box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.2), inset 0px 1px 0px
+		rgba(255, 255, 255, 0.5);
+	float: left;
+	color: black;
+	padding: 3px 11px 3px 11px;
+	
+}
+.calendar #menu>.viewpicker>ul>li>a{text-decoration:none;color:#666;}
+
+.calendar #menu .print {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	right: 130px;
+	font-size: 12px;
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 8px 13px 8px 33px;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, .7);
+	background-color: #fede37;
+	background-image: -webkit-linear-gradient(#fede37, #fecd27);
+	background-image: -moz-linear-gradient(#fede37, #fecd27);
+	border-top: 1px solid #ebc127;
+	border-left: 1px solid #d1ac22;
+	border-right: 1px solid #d1ac22;
+	border-bottom: 1px solid #b3931c;
+	box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.2), inset 0px 1px 0px
+		rgba(255, 255, 255, 0.5);
+	float: left;
+	color: black;
+	border-radius: 5px;
+}
+
+.calendar #menu .print:active {
+	background-image: -webkit-linear-gradient(#fecd27, #fede37);
+	background-image: -moz-linear-gradient(#fecd27, #fede37);
+}
+
+.calendar #menu .print:before {
+	content: '';
+	position: absolute;
+	left: 8px;
+	top: 8px;
+	height: 16px;
+	width: 17px;
+	background-image: url(../_img/icon_print.png);
+}
+
+.calendar #menu select {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.calendar #menu .chzn-container {
+	display: block;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.calendar #menu .chzn-container-single .chzn-single {
+	background-color: #fede37;
+	background-image: -webkit-linear-gradient(#fede37, #fecd27);
+	background-image: -moz-linear-gradient(#fede37, #fecd27);
+	border-top: 1px solid #ebc127;
+	border-left: 1px solid #d1ac22;
+	border-right: 1px solid #d1ac22;
+	border-bottom: 1px solid #b3931c;
+	padding: 2px;
+}
+
+.calendar #menu .chzn-container-single .chzn-single div {
+	background-image: none;
+	background-color: transparent;
+	filter: none;
+	-ms-filter: none;
+}
+
+.calendar #menu .chzn-container-single .chzn-single div b {
+	background-image: url(../_img/icon_arrow_dropdown.png);
+	background-position: 50%;
+}
+
+.calendar #menu .chzn-container-single .chzn-single div:before {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5),
+		rgba(255, 255, 255, 0.1) );
+}
+
+.calendar #menu .chzn-container-single .chzn-single span {
+	font-size: 12px;
+	color:black;
+	text-shadow:0px 1px 1px white;
+	font-weight:bold;
+	padding-left: 5px;
+	border-right: 1px solid cea922;
+}
+
+.calendar #menu .chzn-container .chzn-drop {
+	background-color: #aaa;
+	color: white;
+}
+
+.calendar #menu .chzn-container .chzn-drop .highlighted {
+	background-color: white;
+	color: #666;
+}
+
+#calendarweek{display:block;padding-top:19px;}
+#calendarweek colgroup col.weekend{background:rgba(221,221,221,0.5);}
+#calendarweek th,#calendarweek td{width:108px;padding:1px;}
+#calendarweek th{color:#333;font-size:1px;height:9px;font-weight:normal;background:#fff;border-left:1px solid #bbb;}
+#calendarweek th span{display:block;postion:absolute;margin-top:-22px;font-size:12px;}
+#calendarweek td{border:1px solid #bbb;border-right:none;min-height:89px;height:auto;height:89px; vertical-align:top;position:relative;}
+#calendarweek td:first-child{border-left:none;padding-left:3px;}
+#calendarweek td:last-child{padding-right:3px;}
+#calendarweek .day,#calendarweek .day-inactive,#calendarweek .day,#calendarweek .day-current{text-align:right;padding:6px 5px 4px 0;}
+#calendarweek .day-inactive{color:rgba(0,0,0,0.3)}
+#calendarweek .day-current{color:#fff;background:#999;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#C6C6C6), to(#999999));background:-moz-linear-gradient(0% 87% 90deg,#999999, #C6C6C6);text-shadow:-1px 1px #666;margin-top:0;}
+#calendarweek .day-current span{float:left;margin-left:8px;}
+
+#calendarweek td div.event{height:30px;margin-top:1px;font-size:12px;cursor:pointer;}
+#calendarweek td div.event span{float:left;padding:10px 5px 6px;font-weight:bold;}
+#calendarweek td div.event span.completed,#calendarweek td div.event span.scheduled{display:block;width:30px;height:30px;background:#fed02a url(../_img/icon_check_white.png) no-repeat 5px 7px;padding:0;}
+#calendarweek td div.event span.scheduled{background:#c06 url(../_img/icon_cal_white.png) no-repeat 4px 5px;}
+#calendarweek td div.event span.eventtype{width:68px;}
+#calendarweek td div.event span.highlight{background:#ddd;box-shadow:inset 0px 1px 1px #000;}
+#calendarweek .popup_dlog_left,#calendarweek .popup_dlog_right{width:243px;padding-left:0;margin-top:-65px;right:96px;background-image: url(../_img/dialog_long_right_divider_shadow.png);height:auto;}
+#calendarweek .popup_dlog h2{margin:10px 24px;}
+#calendarweek .popup_dlog p{font-size:12px;margin:0 0 6px;padding-top:6px;}
+#calendarweek .popup_dlog_btm{display:block;width:243px;height:20px;background:transparent url(../_img/dialog_long_right_divider_shadow.png) no-repeat 0 100%;margin-bottom:-20px;}
+#calendarweek .popup_dlog_right{background-image: url(../_img/dialog_left_divider_shadow.png);left:96px;}
+#calendarweek .popup_dlog .event-results p{color:#999;}
+#calendarweek .popup_dlog .event-results p span{font-size:20px;font-weight:bold;color:#222;}
+#calendarweek .popup_dlog .event-results span.time{margin-left:1em;}
+#calendarweek .popup_dlog .event-summary,#calendarweek .popup_dlog .event-results{border-bottom:1px solid #ccc;margin:0 24px;}
+#calendarweek .popup_dlog .event-summary{border-top:1px solid #fff;}
+#calendarweek .popup_dlog .event-action-btns{padding:10px 0;margin:0 24px;border-top:1px solid #fff;}
+#calendarweek .popup_dlog .event-action-btns a{text-decoration:none;color:#000;}
+#calendarweek .popup_dlog .event-action-btns span{font-size:12px;background:#fff;border:1px solid #d6d6d6;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;padding:4px 12px;-webkit-box-shadow: 1px 2px 1px rgba(221,221,221,0.9);-moz-box-shadow: 1px 2px 1px rgba(221,221,221,0.9);box-shadow:1px 2px 1px rgba(221,221,221,0.9);}
+#calendarweek .popup_dlog .event-action-btns span:first-child{margin-right:0.5em;}

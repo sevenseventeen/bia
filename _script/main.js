@@ -36,16 +36,18 @@ $("#maindetails>section:first").addClass("visible").slideDown("slow");
 var mouse_is_inside = false;
 
 $('div[id$="_popup"]').hover(function(){ 
-        mouse_is_inside=true; 
+        mouse_is_inside=true;
     }, function(){ 
         mouse_is_inside=false; 
     });
 
 $("body").mouseup(function(){ 
 		
-       if(! mouse_is_inside) {
+       if(!mouse_is_inside) {
              $('div[id$="_popup"]').hide();   
-             // this gets in the way of the button turning off.     
+             // this gets in the way of the button turning off.   
+			 $('div[id$="_popup"]').parent().find('.eventtype').removeClass('highlight');
+				
        } 
     });
 
@@ -251,10 +253,24 @@ $(".stopwatch").bind("click", function(e) {
 		popup($(this), $goalType);  
 });
 
+//Calendar popups //
+$(".event").bind("click", function(e) {
+		var $goalType = null; 
+		$goalType = $(this).attr('id'); 
+		var $highlight = '#' + $goalType + ' .eventtype';
+		$( $highlight ).addClass('highlight');
+		popup($(this), $goalType);  
+		
+});
+
 // popup closebox function //
 $(".closebox").bind("click", function(e) {
 	$(this).parent().hide();
-	});
+	
+	if ($(this).hasClass('closebox-calendar')) {
+		$(this).parent().parent().find('.eventtype').removeClass('highlight');
+	}
+});
 
 $("#stopwatch_popup>ul>img").bind("click", function(e) {
 		var $targetTime = $("#stopwatch_popup #hrs").val()+":"+$("#stopwatch_popup #mins").val()+":"+$("#stopwatch_popup #secs").val();
@@ -375,6 +391,11 @@ $("#distance_unit_menu li").bind("click", function(e) {
 	if( $("#goalfilter").length && $("#workoutfilter").length ) {
 		$("#goalfilter").chosen();
 		$("#workoutfilter").chosen();
+		$(".chzn-container-single").addClass("chzn-container-single-nosearch");
+	}
+	
+	if ( $("#dayfilter").length ) {
+		$("#dayfilter").chosen();
 		$(".chzn-container-single").addClass("chzn-container-single-nosearch");
 	}
 
