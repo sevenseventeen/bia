@@ -1,0 +1,267 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>Day View</title>
+<meta name="description" content="">
+<meta name="author" content="">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="_style/normalize.css">
+<link rel="stylesheet" href="_style/main.css">
+<link rel="stylesheet" href="_style/jqueryui/jquery-ui-1.8.16.custom.css">
+<link rel="stylesheet" href="_style/calendar.css">
+<link rel="stylesheet" href="_style/chosen/chosen.css">
+
+<!--[if lt IE 9]>
+<link rel="stylesheet" href="_style/ie8.css">
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" href="_style/ie9.css">
+
+
+<![endif]-->
+
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+
+<script src="_script/main.js"></script>
+<script src="_script/chosen/chosen.jquery.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<div id="container" class="calendar day">
+		<header>
+			<section id="accountNav">
+				<img src="_img/profilephoto.png" /><a href="#">logout</a> <a
+					href="#">settings</a><span>hello, <b>lorem</b> </span>
+			</section>
+
+			<nav id="mainNav">
+				<div id="logo"></div>
+				<section title="home">
+					<span><a href="#home">home</a> </span>
+		    </section>
+				<section title="profile">
+					<span><a href="#profile">profile</a> </span>
+		    </section>
+				<section title="train" class="active">
+					<span><a href="#train">train</a> </span>
+					<ul>
+				    <li><a href="#calendar">Calendar</a></li>
+						<li>Goals</li>
+					</ul>
+				</section>
+				<section title="connect">
+					<span><a href="#connect">connect</a> </span>
+					<ul>
+				    <li>People</li>
+						<li>Challenges</li>
+						<li>Groups</li>
+						<li>Races &amp; Events</li>
+					</ul>
+				</section>
+				<section title="add">
+					<span><a href="#add">add</a> </span>
+					<ul>
+				    <li>Workout</li>
+						<li>Race Results</li>
+						<li>Food</li>
+					</ul>
+				</section>
+				
+			</nav>
+		</header>
+		<footer> </footer>
+		<div id="main" role="main">
+	
+			<nav id="menu" class="open">
+				<h2>Training Day</h2>
+				<div class="datepicker">
+					<h1>Wednesday, September 28, 2011</h1>
+				</div>
+				<div class="viewpicker">
+					<div>Show by:</div>
+					<ul>
+						<li class="selected">Day</li>
+						<li><a href="calendar_week.html">Week</a></li>
+						<li><a href="calendar_month.html">Month</a></li>
+					</ul>
+				</div>
+				<a href="#" class="print">Print</a>
+				<select id="dayfilter">
+				<option selected>All</option>
+				<option>Planned</option>
+				<option>Completed</option>
+				</select>
+			</nav>
+			<section class="visible expanded">
+				<section id="maindetails" class="maindetails clearfix">
+					<section class="full">
+						<div class="banner yellow">
+							<div>Nutrition Balance</div>
+							<a href="#">Add</a>
+						</div>
+						<div class="breakdown">
+							<div id="breakdown_calconsumed" class="stats large right">
+								<div class="value">1,876</div>
+								<div class="label">calories consumed</div>
+							</div>
+							<div id="breakdown_calburned" class="stats large">
+								<div class="value">2,567</div>
+								<div class="label">calories burned</div>
+							</div>
+							<div id="breakdown_carbs" class="stats small right">
+								<div class="value">48</div>
+								<div class="label">carbs (g)</div>
+							</div>
+							<div id="breakdown_fat" class="stats small center">
+								<div class="value">5</div>
+								<div class="label">fat (g)</div>
+							</div>
+							<div id="breakdown_protein" class="stats small">
+								<div class="value">36</div>
+								<div class="label">protein (g)</div>
+							</div>
+						</div>
+					</section>
+					<section class="left">
+						<div class="banner darkpink">
+							<div><img src="_img/icon_cal_white.png">Planned</div>
+							<a href="#">Add</a>
+						</div>
+						<section class="tabOpened">
+							<div class="tabbed refresh">
+								<div class="tab darkpink"></div>
+							</div>
+							<div class="sidebar">
+								<div class="fill darkpink"></div>
+								<img src="_img/icon_run_white.png" />
+							</div>
+							<p class="activity">TrackRun</p>
+							<p class="title">Wednesday Training</p>
+							<div class="stats small">
+								<div class="value">5</div>
+								<div class="label">distance (mi)</div>
+							</div>
+							<div class="tabbed open">
+								<div class="tab darkpink"></div>
+								<div class="panel darkpink">
+									<p>
+										<strong>Your personal best</strong>
+									</p>
+									<div class="stats small first">
+										<div class="value">33.3</div>
+										<div class="label">distance (mi)</div>
+									</div>
+									<div class="stats small second">
+										<div class="value">2:08:03</div>
+										<div class="label">time (min)</div>
+									</div>
+									<p>Bacon ipsum dolor sit amet tongue ut deserunt chicken
+										shankle tenderloin.</p>
+								</div>
+							</div>
+							<p>Bacon ipsum dolor sit amet tongue ut deserunt chicken
+								shankle tenderloin.</p>
+						</section>
+						<section>
+							<div class="tabbed refresh">
+								<div class="tab darkpink"></div>
+							</div>
+							<div class="sidebar">
+								<div class="fill darkpink"></div>
+								<img src="_img/icon_swim_white.png" />
+							</div>
+							<p class="activity">Pool</p>
+							<p class="title">50 Laps</p>
+							<div class="stats small">
+								<div class="value">1:30:00</div>
+								<div class="label">time (min)</div>
+							</div>
+						</section>
+					</section>
+					<section class="right">
+						<div class="banner yellow">
+							<div><img style="margin-top:2px;margin-bottom:1px;" src="_img/icon_check_white.png">Completed</div>
+							<a href="#">Add</a>
+						</div>
+						<section>
+							<div class="sidebar">
+								<div class="fill yellow"></div>
+								<img src="_img/icon_bike_white.png" />
+							</div>
+							<p class="activity">RoadBike</p>
+							<p class="title">Bike with the Girls</p>
+							<div class="breakdown small">
+								<div class="stats small topleft">
+									<div class="value">25.1</div>
+									<div class="label">distance (mi)</div>
+								</div>
+								<div class="stats small topright">
+									<div class="value">2:23:43</div>
+									<div class="label">time (min)</div>
+								</div>
+								<div class="stats tiny bottomleft">
+									<div class="value">19.5</div>
+									<div class="label">mph</div>
+								</div>
+								<div class="stats tiny bottomcenter">
+									<div class="value">350</div>
+									<div class="label">cal</div>
+								</div>
+								<div class="stats tiny bottomright">
+									<div class="value">127</div>
+									<div class="label">hrm</div>
+								</div>
+
+							</div>
+							<div class="tabbed open">
+								<div class="tab yellow"></div>
+								<div class="panel yellow">
+									<p>
+										<strong>Your personal best</strong>
+									</p>
+									<div class="stats small first">
+										<div class="value">33.3</div>
+										<div class="label">distance (mi)</div>
+									</div>
+									<div class="stats small second">
+										<div class="value">2:08:03</div>
+										<div class="label">time (min)</div>
+									</div>
+									<p>Bacon ipsum dolor sit amet tongue ut deserunt chicken
+										shankle tenderloin.</p>
+								</div>
+							</div>
+							<p>Bacon ipsum dolor sit amet tongue ut deserunt chicken
+								shankle tenderloin brisket, cupidatat boudin minim consectetur
+								chuck.</p>
+						</section>
+					</section>
+				</section>
+
+			</section>
+		</div>
+		<footer> </footer>
+	</div>
+	<!--! end of #container -->
+	<div id="modalbg"></div>
+	<div id="modalclose"></div>
+</body>
+</html>

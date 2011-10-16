@@ -44,9 +44,10 @@ $('div[id$="_popup"]').hover(function(){
 $("body").mouseup(function(){ 
 		
        if(!mouse_is_inside) {
+		   
              $('div[id$="_popup"]').hide();   
              // this gets in the way of the button turning off.   
-			 $('div[id$="_popup"]').parent().find('.eventtype').removeClass('highlight');
+			 //$('div[id$="_popup"]').parent().find('.eventtype').removeClass('highlight');
 				
        } 
     });
@@ -149,6 +150,7 @@ function countThisBox($which_box) {
 function popup($split, $goalType) {
 /* creates the popup name by prepending the button's id */
 	if ($goalType > "") {
+		if(!mouse_is_inside)
 			$("#" + $goalType + "_popup").toggle();		
 	
 // tests the check boxes 
@@ -257,8 +259,8 @@ $(".stopwatch").bind("click", function(e) {
 $(".event").bind("click", function(e) {
 		var $goalType = null; 
 		$goalType = $(this).attr('id'); 
-		var $highlight = '#' + $goalType + ' .eventtype';
-		$( $highlight ).addClass('highlight');
+		//var $highlight = '#' + $goalType + ' .eventtype';
+		//$( $highlight ).addClass('highlight');
 		popup($(this), $goalType);  
 		
 });
@@ -267,9 +269,9 @@ $(".event").bind("click", function(e) {
 $(".closebox").bind("click", function(e) {
 	$(this).parent().hide();
 	
-	if ($(this).hasClass('closebox-calendar')) {
+	/*if ($(this).hasClass('closebox-calendar')) {
 		$(this).parent().parent().find('.eventtype').removeClass('highlight');
-	}
+	}*/
 });
 
 $("#stopwatch_popup>ul>img").bind("click", function(e) {
@@ -388,6 +390,13 @@ $("#distance_unit_menu li").bind("click", function(e) {
 		openModal($("#addVideoModal"));
 	});
 	
+	//Day page
+	$(".tabbed > .tab").bind("click", function(e){
+		e.stopPropagation();
+		$(e.target).parent().toggleClass("open");
+		$(e.target).parent().parent().toggleClass("tabOpened");
+	});
+	
 	if( $("#goalfilter").length && $("#workoutfilter").length ) {
 		$("#goalfilter").chosen();
 		$("#workoutfilter").chosen();
@@ -441,13 +450,22 @@ $("#distance_unit_menu li").bind("click", function(e) {
 
 
 function showAddmore() {
-	$("#detail").addClass("expanded");
+	/* for journal page*/
+	if ( $("#container").hasClass('journal') ) {
+		$("#maindetails").removeClass("expanded").animate();
+	} else {
+		$("#detail").addClass("expanded");
+	}
 	$("#addmore_header").unbind("click");
 	$("#addmore_header").bind("click", hideAddmore);
 }
 
 function hideAddmore() {
-	$("#detail").removeClass("expanded");
+	if ( $("#container").hasClass('journal') ) {
+		$("#maindetails").addClass("expanded");
+	} else {
+		$("#detail").removeClass("expanded");
+	}
 	$("#addmore_header").unbind("click");
 	$("#addmore_header").bind("click", showAddmore);
 }
