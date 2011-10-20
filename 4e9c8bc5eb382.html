@@ -1,0 +1,349 @@
+
+<script tyle="script/text">
+    var timerId=null;
+    var subPath=document.getElementById("subpath").value;
+    function createUploader(){  
+
+        var uploader = new qq.FileUploader({
+            element: document.getElementById('upl'),
+            action: '/Workout/addphotos?subpath='+subPath,
+            debug: true,
+            multiple:true,
+            maxUploadNum:12,
+            sizeLimit:6*1024*1024,
+            allowedExtensions: ['jpg','jpeg','gif','png','bmp'],
+            buttonCaption:'',
+            onSubmit: function(id, fileName){  
+            
+            },
+            onProgress: function(id, fileName, loaded, total){},
+            onComplete: function(id, fileName, responseJSON){
+                //if(responseJSON.success)
+                {
+                    //alert(subPath);
+                    if(fileName==null||fileName=="")
+                    {
+                        return;
+                    }
+                    
+                    timerId=setTimeout(timerGetDspPhotos,1000);
+                    $(".qq-upload-list > li").hover(
+                    function(){
+                        $(this).css("background-Color", "#ffffff");
+                    },
+                    function(){
+                        $(this).css("background-Color", "#f0f0f0");
+                    }
+                );
+                }
+            }
+        });           
+    }
+    $(document).ready(function() {  
+				$("#upl").css("display", "none");
+        createUploader();
+        getDspPhotos(0);
+		$("#closeOK").bind("click",function(){
+			$('#modalclose').trigger('click');
+		});
+		$("#upl").fadeIn("slow");
+    })
+    function timerGetDspPhotos()
+    {
+        getDspPhotos(1);
+    }
+    function getDspPhotos(type)
+    {
+        var subPath=document.getElementById("subpath").value;
+        var activityId="1";
+        $.ajax({url:"/workout/getphotos",
+            data:"subpath="+subPath,
+            success:function(data, textStatus){
+                var edata=eval(data);
+
+                var photoList=edata.toString().split("|");
+                if(photoList!="")
+                {
+                    photoListNum=photoList.length;
+                }
+                //display
+                for(var i = 0; i < 4; i++) {
+                    try {
+                        if(photoList[i]){
+							//redraw(document.getElementById("defaultphoto"+(i+1)), 110, 100);
+                            $("#workoutPhoto"+(i+1)).attr("src", photoList[i]);
+                            var name1 = photoList[i].split("/");
+                            var nname1 = name1[name1.length-1].split(".")[0];
+							$("#workoutPhoto"+(i+1)).attr("title", nname1);
+                            //document.getElementById("adefaultphoto"+(i+1)).setAttribute("href", "/workout/showphotos?photoname="+nname1[0]);
+                        };
+                    }
+                    catch(e){}
+                }
+                                
+                if(photoList.length>=12)
+                {
+                    var upl=document.getElementById('upl');
+                    upl.innerHTML="<div> &nbsp;Sorry!<br><br>&nbsp;&nbsp;You can not upload any more photos!<br><br>&nbsp;&nbsp;&nbsp;the maximum number you can upload is 12.</div>";
+                    
+                    if(type==1)
+                    {
+                        upl.innerHTML="<div> &nbsp;Heads up!<br><br>&nbsp;&nbsp;You have already uploaded 12 photos!<br><br>&nbsp;&nbsp;&nbsp;the maximum number you can upload is 12.</div>";
+                    }
+                }
+            }
+        });
+    }
+</script>
+<style>
+    #containerw
+    {
+        position: relative;
+        top:12px;
+        left:0px;
+        width:450px;
+        z-index: 100;
+        overflow: hidden;
+        padding: 0 0 15px;
+        background: url("/images/journal/lab_bg_hover.gif") repeat-x left top;
+    }
+
+    #uploadcontent
+    {
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        top:0px;
+        width: 99.5%;
+        padding-top: 2px;
+        padding-bottom: 3px;
+        z-index: 3;
+        background: url("/images/journal/lab_bg.gif") repeat-x left bottom;
+    }
+    #upl
+    {
+        left:0px;
+        width: 100%;
+    }
+    #desc
+    {
+        border: 0px solid #ddd;
+        position: absolute;
+        top:145px;
+        width: 95%;
+        height: 60px;
+        color:#333;
+        font-size: 10;
+        padding: 2px;
+    }
+	#upl .qq-uploader {height:auto;}
+    #upl .qq-upload-list 
+    {
+
+		display: block;
+	
+		padding: 0;
+		width: 298px;
+		float:left;
+		margin:0 0 10px;
+    }
+	#upl .qq-upload-drop-area{display:none;visibility:hidden;}
+	
+	#upl #qq-upload-success {
+	}
+	#upl .qq-upload-list li{height:auto;text-align: right;font-size:12px;border-bottom:none;padding-bottom:10px;}
+	#upl .qq-upload-file{display:block;}
+	
+	#upl .qq-upload-size, #upl .qq-upload-cancel {
+		font-size: 12px;
+		color:#999;
+	}
+	#upl .qq-upload-size a{position: absolute;left: 5px;}
+	
+	#upl .qq-upload-button
+	{
+		font: bold 14px/1 Helvetica, sans-serif;
+		color:#fff;
+		background:#dddddd;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dddddd), to(#aaaaaa));
+		background-image: -webkit-linear-gradient(top, #dddddd, #aaaaaa);
+		background-image: -moz-linear-gradient(top, #dddddd, #aaaaaa);
+		background-image: -ms-linear-gradient(top, #dddddd, #aaaaaa);
+		border:1px solid #b9b9b9;
+		-webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		border-radius:3px;
+		-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.15), inset 1px 1px 2px rgba(255,255,255,0.45);
+		-moz-box-shadow:1px 1px 2px rgba(0,0,0,0.15), inset 1px 1px 2px rgba(255,255,255,0.45);
+		box-shadow:1px 1px 2px rgba(0,0,0,0.15), inset 1px 1px 2px rgba(255,255,255,0.45);
+		height:auto;
+		padding:15px 0 14px;
+		position: relative;
+		width: 118px;
+		right:10px;
+		float:right;
+	}
+	
+	#upl .qq-upload-file .meter{width:298px;margin-left:0;height:42px;-moz-border-radius: 25px;-webkit-border-radius: 5px;border-radius: 5px;}
+	#upl .qq-upload-file .meter > span{-moz-border-radius: 3px;-webkit-border-radius: 3px;border-radius: 3px;background-color: #FFC9DF;
+	background-image: -webkit-gradient(
+          linear,
+          left bottom,
+          left top,
+          color-stop(0, rgb(255,201,223)),
+          color-stop(1, rgb(238,188,208))
+         );
+        background-image: -webkit-linear-gradient(
+          center bottom,
+          rgb(255,201,223) 37%,
+          rgb(238,188,208) 69%
+         );
+        background-image: -moz-linear-gradient(
+          center bottom,
+          rgb(255,201,223) 37%,
+          rgb(238,188,208) 69%
+         );
+        background-image: -ms-linear-gradient(
+          center bottom,
+          rgb(255,201,223) 37%,
+          rgb(238,188,208) 69%
+         );
+        background-image: -o-linear-gradient(
+          center bottom,
+          rgb(255,201,223) 37%,
+          rgb(238,188,208) 69%
+         );}
+	#upl .qq-upload-file .meter > span:after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        background-image:
+           -webkit-gradient(linear, 0 0, 100% 100%,
+              color-stop(.25, rgba(255, 255, 255, .2)),
+              color-stop(.25, transparent), color-stop(.5, transparent),
+              color-stop(.5, rgba(255, 255, 255, .2)),
+              color-stop(.75, rgba(255, 255, 255, .2)),
+              color-stop(.75, transparent), to(transparent)
+           );
+        background-image:
+                -webkit-linear-gradient(
+                  45deg,
+              rgba(255, 255, 255, .2) 25%,
+              transparent 25%,
+              transparent 50%,
+              rgba(255, 255, 255, .2) 50%,
+              rgba(255, 255, 255, .2) 75%,
+              transparent 75%,
+              transparent
+           );
+        background-image:
+                -moz-linear-gradient(
+                  45deg,
+              rgba(255, 255, 255, .2) 25%,
+              transparent 25%,
+              transparent 50%,
+              rgba(255, 255, 255, .2) 50%,
+              rgba(255, 255, 255, .2) 75%,
+              transparent 75%,
+              transparent
+           );
+        background-image:
+                -ms-linear-gradient(
+                  45deg,
+              rgba(255, 255, 255, .2) 25%,
+              transparent 25%,
+              transparent 50%,
+              rgba(255, 255, 255, .2) 50%,
+              rgba(255, 255, 255, .2) 75%,
+              transparent 75%,
+              transparent
+           );
+        background-image:
+                -o-linear-gradient(
+                  45deg,
+              rgba(255, 255, 255, .2) 25%,
+              transparent 25%,
+              transparent 50%,
+              rgba(255, 255, 255, .2) 50%,
+              rgba(255, 255, 255, .2) 75%,
+              transparent 75%,
+              transparent
+           );
+        z-index: 1;
+        -webkit-background-size: 50px 50px;
+        -moz-background-size: 50px 50px;
+        -webkit-animation: move 2s linear infinite;
+           -webkit-border-top-right-radius: 8px;
+        -webkit-border-bottom-right-radius: 8px;
+               -moz-border-radius-topright: 8px;
+            -moz-border-radius-bottomright: 8px;
+                   border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            -webkit-border-top-left-radius: 20px;
+         -webkit-border-bottom-left-radius: 20px;
+                -moz-border-radius-topleft: 20px;
+             -moz-border-radius-bottomleft: 20px;
+                    border-top-left-radius: 20px;
+                 border-bottom-left-radius: 20px;
+        overflow: hidden;
+}
+	#upl .qq-upload-file-progress{position: absolute;left: 10px;top: 13px;color:#000;text-align: left;width: 100%;}
+	#upl .qq-upload-file-progress span{position:absolute;right:15px;}
+	#closeOK
+	{
+		/*background: url("/images/photoplaceholder.png") repeat scroll right bottom transparent;
+		border: medium none;*/
+		font: bold 14px/1 Helvetica, sans-serif;
+		color:#fff;
+		background:#ff277d;
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ff277d), to(#d52168));
+		background-image: -webkit-linear-gradient(top, #ff277d, #d52168);
+		background-image: -moz-linear-gradient(top, #ff277d, #d52168);
+		background-image: -ms-linear-gradient(top, #ff277d, #d52168);
+		border:1px solid #d7236b;
+		-webkit-border-radius:3px;
+		-moz-border-radius:3px;
+		border-radius:3px;
+		-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.15), inset 1px 1px 2px rgba(255,255,255,0.45);
+		-moz-box-shadow:1px 1px 2px rgba(0,0,0,0.15), inset 1px 1px 2px rgba(255,255,255,0.45);
+		box-shadow:1px 1px 2px rgba(0,0,0,0.15), inset 1px 1px 2px rgba(255,255,255,0.45);
+		display: block;
+		margin-top:10px;
+		padding:15px 0 14px;
+		right: 10px;
+		width: 118px;
+		cursor: pointer;
+		float:right;
+	}
+	#closeOK span{display:block;margin-left:30px;background:transparent url("_img/icon_check_white.png") no-repeat 0 0;padding-left:25px;}
+
+    #desc {margin-left:10px;}
+    #desc ul.notelist { width: 100%;margin:5px;bottom: 22px}
+    #desc li {font:normal 10px/18px arial;}
+    #desc strong {font:bold 10px/18px arial;}
+</style>
+
+<div id="containerw">
+    <div id="uploadcontent">
+        <div id="upl">
+        	<div class="qq-uploader clearfix">
+            	<div class="qq-upload-drop-area" style="display: none; "></div>
+                <div class="qq-upload-button" style="position: relative; overflow-x: hidden; overflow-y: hidden; direction: ltr; ">Add Photos
+                	<input multiple="multiple" type="file" name="file" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; cursor: pointer; opacity: 0; "/>
+                </div>
+                <ul class="qq-upload-list">
+                	<li class=" qq-upload-success" style="background-color: transparent; ">
+                    	<span class="qq-upload-file"><div class="meter"><span style="width: 100%;"></span></div></span>
+                        <span class="qq-upload-file-progress">IMG_20110806_213803.jpg <span>100%</span></span>
+                        <span class="qq-upload-size"><a href="#">Remove</a>0.3MB of 0.3MB</span> <span class="qq-upload-failed-text">Failed</span></li>
+                    <li class=" qq-upload-success" style="background-color: transparent; ">
+                    	<span class="qq-upload-file"><div class="meter"><span style="width: 100%;"></span></div></span>
+                        <span class="qq-upload-file-progress">IMG_20110806_213803.jpg <span>100%</span></span>
+                        <span class="qq-upload-size"><a href="#">Remove</a>0.3MB of 0.3MB</span> <span class="qq-upload-failed-text">Failed</span></li>
+                </ul>
+            </div>
+        
+        </div>
+        
+	</div>
+	<div id="closeOK"><span>Nice</span></div>
+</div>
