@@ -32,25 +32,6 @@ $("#maindetails>section:first").addClass("visible").slideDown("slow");
 	
 // end profile on ready //
 
-// Mouse Outside Click code (for popup box)
-var mouse_is_inside = false;
-
-$('div[id$="_popup"]').hover(function(){ 
-        mouse_is_inside=true;
-    }, function(){ 
-        mouse_is_inside=false; 
-    });
-
-$("body").mouseup(function(){ 
-		
-       if(!mouse_is_inside) {
-		   
-             $('div[id$="_popup"]').hide();   
-             // this gets in the way of the button turning off.   
-			 //$('div[id$="_popup"]').parent().find('.eventtype').removeClass('highlight');
-				
-       } 
-    });
 
 // check box counter functions //
 
@@ -206,73 +187,7 @@ $(function() {
 		});
 	}
 
-//  Used on Create Account page //
-$(".accountButton").bind("click", function(e) {
-		var $go2url = null; 
-		$go2url = $(this).attr('id'); 
-//		alert($go2url);
-		dropsheet($(this), $go2url);  
-});
 
-// Used on Add Workout and train pages //
-	$(".icon").bind("click", function(e) {
-			var $go2url = null; 
-			$go2url = $(this).attr('id'); 	
-	  		activate($(this), $go2url);
-	});
-
-//used on profile page //
-$("#menu .settingsmenu li").bind("click", function(e) {
-	slider($(this));
-});
-
-// Used on Goal Type //
-$(".typeofgoal").bind("click", function(e) {
-		var $typeOfGoal = null; 
-		$typeOfGoal = $(this).attr('id'); 
-//  	alert($typeOfGoal);
-		gotoGoal($(this), $typeOfGoal);  
-		
-});
-
-// Used on Goal Type and Do More pages //
-$(".split8").bind("click", function(e) {
-		var $goalType = null; 
-		$goalType = $(this).attr('id'); 
-//		alert($(this) +"/"+ $goalType);
-		popup($(this), $goalType);  
-});
-$(".split5").bind("click", function(e) {
-		var $goalType = null; 
-		$goalType = $(this).attr('id'); 
-//		alert($goalType);
-		popup($(this), $goalType);  
-});
-$(".stopwatch").bind("click", function(e) {
-		var $goalType = null; 
-		$goalType = $(this).attr('id'); 
-//		alert($goalType);
-		popup($(this), $goalType);  
-});
-
-//Calendar popups //
-$(".event").bind("click", function(e) {
-		var $goalType = null; 
-		$goalType = $(this).attr('id'); 
-		//var $highlight = '#' + $goalType + ' .eventtype';
-		//$( $highlight ).addClass('highlight');
-		popup($(this), $goalType);  
-		
-});
-
-// popup closebox function //
-$(".closebox").bind("click", function(e) {
-	$(this).parent().hide();
-	
-	/*if ($(this).hasClass('closebox-calendar')) {
-		$(this).parent().parent().find('.eventtype').removeClass('highlight');
-	}*/
-});
 
 $("#stopwatch_popup>ul>img").bind("click", function(e) {
 		var $targetTime = $("#stopwatch_popup #hrs").val()+":"+$("#stopwatch_popup #mins").val()+":"+$("#stopwatch_popup #secs").val();

@@ -2,7 +2,7 @@ body{font-family:Arial, Helvetica, sans-serif;}
 body,section,nav,div,p,ul,li,input,img {
 position: relative;
 }
-
+div {position:inherit;}
 ul {
 	margin: 0px;
 }
@@ -246,7 +246,8 @@ ul.feed>li>.commentadd>input {
 	font-style: italic;
 	padding: 5px;
 }
-/*... */
+/*... 
+.calendar #maindetails div {position:none;}*/
 #homepage .maindetails {
 
 }
@@ -2705,6 +2706,7 @@ padding-left: 30px;
 	height: 15px;
 	top: 20px;
 	right: 20px;
+	width:15px;
 }
 .closebox:hover {
 	cursor: pointer;
@@ -2923,7 +2925,7 @@ fieldset{border:none;margin-top:5px;}
 .milesLabel,.femaleLabel{margin-right:35px;}
 
 
-#maindetails{background:#fff;width:780px;margin:0 auto;padding:19px 0;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-moz-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);z-index:99;}
+#maindetails{background:#fff;width:780px;margin:0 auto;padding:19px 0 0 0;box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-webkit-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);-moz-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 1.0);z-index:99;}
 #maindetails .left, .profileDetails .right{float:left;display:block;width:261px;}
 #maindetails .right{float:right;width:499px;}
 #maindetails .left section{margin-left:21px;}
