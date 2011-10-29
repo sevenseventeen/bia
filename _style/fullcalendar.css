@@ -120,33 +120,6 @@ html .fc,
 	
 	
 
-/* Cell Styles
-------------------------------------------------------------------------*/
-
-.fc-widget-header,    /* <th>, usually */
-.fc-widget-content {  /* <td>, usually */
-	border: 1px solid #ccc;
-	background:#fff;
-	}
-	
-.fc-sun, .fc-mon, .fc-tue, .fc-wed, .fc-thu, .fc-fri, .fc-sat {padding:8px 0 0 0;}
-
-.fc-widget-header {height:10px; font-size:12px; font-weight:lighter; }
-	
-.fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
-	background: #ffffff url(../_img/today.png) no-repeat top left;
-	
-	}
-.fc-state-highlight  .fc-day-number {color:#fff; text-shadow:-1px 1px #666666;}
-
-
-.fc-cell-overlay { /* semi-transparent rectangle while dragging */
-	background: #9cf;
-	opacity: .2;
-	filter: alpha(opacity=20); /* for IE */
-	}
-	
-
 
 /* Buttons
 ------------------------------------------------------------------------*/
@@ -666,7 +639,7 @@ table.fc-border-separate {
     }
 
 .ui-widget-header {background:#fff; color:#000;  border:none;}
-.fc-week0 .fc-sat, .fc-week0 .fc-sun, .fc-week1 .fc-sat, .fc-week1 .fc-sun, .fc-week2 .fc-sat, .fc-week2 .fc-sun, .fc-week3 .fc-sat, .fc-week3 .fc-sun, .fc-week4 .fc-sat, .fc-week4 .fc-sun, .fc-week5 .fc-sat, .fc-week5 .fc-sun, .fc-week6 .fc-sat, .fc-week6 .fc-sun {background:#eee;}
+.fc-week0 .fc-sat, .fc-week0 .fc-sun, .fc-week1 .fc-sat, .fc-week1 .fc-sun, .fc-week2 .fc-sat, .fc-week2 .fc-sun, .fc-week3 .fc-sat, .fc-week3 .fc-sun, .fc-week4 .fc-sat, .fc-week4 .fc-sun, .fc-week5 .fc-sat, .fc-week5 .fc-sun, .fc-week6 .fc-sat, .fc-week6 .fc-sun {background-color:#eee;}
 		
 
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {background:#FEDE37;}
@@ -693,3 +666,32 @@ table.fc-border-separate {
 .sec_info {width:500px; position:absolute; left:40px; top:84px; z-index:202;}
 	.sec_info span {float:left; margin:0 15px 0 0;}
 	
+	
+	
+/* Cell Styles
+------------------------------------------------------------------------*/
+
+.fc-widget-header,    /* <th>, usually */
+.fc-widget-content {  /* <td>, usually */
+	border: 1px solid #ccc;
+	background:#fff;
+	}
+	
+.fc-sun, .fc-mon, .fc-tue, .fc-wed, .fc-thu, .fc-fri, .fc-sat {padding:8px 0 0 0;}
+
+.fc-widget-header {height:10px; font-size:12px; font-weight:lighter; }
+	
+.fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
+	background: #ffffff url(../_img/today.png) no-repeat top left;
+	
+	}
+.fc-state-highlight  .fc-day-number {color:#fff; text-shadow:-1px 1px #666666;}
+
+
+.fc-cell-overlay { /* semi-transparent rectangle while dragging */
+	background: #9cf;
+	opacity: .2;
+	filter: alpha(opacity=20); /* for IE */
+	}
+	
+
